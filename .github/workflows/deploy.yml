@@ -42,3 +42,7 @@ jobs:
         
       - name: Xcode version
         run: /usr/bin/xcodebuild -version
+        
+      # Device slice
+      - name: Build Archive
+        run: xcode-build -sdk iphoneos -project CocoaHeadsNL/CocoaHeadsNL.xcodeproj
