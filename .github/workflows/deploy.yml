@@ -84,3 +84,8 @@ jobs:
           -framework "build/EMVConnectiOS.framework-catalyst.xcarchive/Products/Library/Frameworks/EMVConnectiOS.framework" \
           -output "$(pwd)/EMVConnectiOS_${VERSION}.xcframework"
 
+      - name: Final Version
+        run: |
+          tar -czv -f $(getFinalVersionName).tar.gz $(getFinalVersionName)
+          
+
