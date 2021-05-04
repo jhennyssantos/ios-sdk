@@ -75,3 +75,12 @@ jobs:
         run: |
           xcodebuild build -project EMVConnectiOS.xcodeproj \
           -target EMVConnectiOS -sdk iphonesimulator SYMROOT=build
+
+      - name: Create xcframework
+        run: |
+          xcodebuild -create-xcframework \
+          -framework "build/EMVConnectiOS.framework-iphoneos.xcarchive/Products/Library/Frameworks/EMVConnectiOS.framework" \
+          -framework "build/EMVConnectiOS.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/EMVConnectiOS.framework" \
+          -framework "build/EMVConnectiOS.framework-catalyst.xcarchive/Products/Library/Frameworks/EMVConnectiOS.framework" \
+          -output "$(pwd)/EMVConnectiOS_${VERSION}.xcframework"
+
