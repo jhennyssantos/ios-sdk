@@ -1,0 +1,1436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		CFB777641FAA223C007DD0AD /* EMVConnectiOS-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CFB777671FAA223C007DD0AD /* Build configuration list for PBXAggregateTarget "EMVConnectiOS-Universal" */;
+			buildPhases = (
+				CFB777681FAA2258007DD0AD /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "EMVConnectiOS-Universal";
+			productName = "EMVConnectiOS-Universal";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		848DEAE71FBA058200CD39AF /* WebsocketTimeoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DEAE61FBA058200CD39AF /* WebsocketTimeoutProtocol.swift */; };
+		A6436C8420347A960091379C /* Data+AppendingToFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6436C8320347A960091379C /* Data+AppendingToFile.swift */; };
+		A64E080D215022DC009A7921 /* WebsocketComm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B752E1F9022540060CB14 /* WebsocketComm.swift */; };
+		A64E080E215022DC009A7921 /* MessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83D61F962C4D00D21B71 /* MessageHandler.swift */; };
+		A64E080F215022DC009A7921 /* TerminalListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC1879D1F8EB14400E2AB65 /* TerminalListManager.swift */; };
+		A64E0810215022DC009A7921 /* ZoopTerminalVoidPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF60C21A1FA8D04D0000283F /* ZoopTerminalVoidPayment.swift */; };
+		A64E0811215022DC009A7921 /* ZoopTerminalTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD62C7E1F97E476000C8ED4 /* ZoopTerminalTransaction.swift */; };
+		A64E0812215022DC009A7921 /* PP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83C41F95194F00D21B71 /* PP.swift */; };
+		A64E0813215022DC009A7921 /* ZoopTerminalPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD62C821F97ED01000C8ED4 /* ZoopTerminalPayment.swift */; };
+		A64E0814215022DC009A7921 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB292045AAEC00AF1BFC /* Device.swift */; };
+		A64E0815215022DC009A7921 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B42772006901B0014B49D /* Query.swift */; };
+		A64E0816215022DC009A7921 /* APISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F201FE9561200A1A5CB /* APISettings.swift */; };
+		A64E0817215022DC009A7921 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFECB5461FACF51400F72756 /* Logger.swift */; };
+		A64E0818215022DC009A7921 /* Date+miliseconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF68A85C1F9F7AD4001449EF /* Date+miliseconds.swift */; };
+		A64E0819215022DC009A7921 /* PaymentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5189BC42065958600C64A1B /* PaymentType.swift */; };
+		A64E081A215022DC009A7921 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64EE3971FF27962008F7CD4 /* Receipt.swift */; };
+		A64E081B215022DC009A7921 /* TerminalProtocolChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B750F1F901DF20060CB14 /* TerminalProtocolChannel.swift */; };
+		A64E081C215022DC009A7921 /* BtAccesoryDeviceFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB3B2049D8DA00AF1BFC /* BtAccesoryDeviceFinder.swift */; };
+		A64E081D215022DC009A7921 /* EADSessionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC187481F8E8C2800E2AB65 /* EADSessionController.m */; };
+		A64E081E215022DC009A7921 /* BtLeDeviceFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB3620471B6F00AF1BFC /* BtLeDeviceFinder.swift */; };
+		A64E081F215022DC009A7921 /* BtLeDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB41204CE05300AF1BFC /* BtLeDevice.swift */; };
+		A64E0820215022DC009A7921 /* DeviceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB2D2045B9DA00AF1BFC /* DeviceProtocol.swift */; };
+		A64E0821215022DC009A7921 /* ZoopSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B0E2F1FFEAC7900014B07 /* ZoopSession.swift */; };
+		A64E0822215022DC009A7921 /* SQLiteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F321FE9783300A1A5CB /* SQLiteDatabase.swift */; };
+		A64E0823215022DC009A7921 /* CGPath+Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF992A6F1FB5D05A00780736 /* CGPath+Points.swift */; };
+		A64E0824215022DC009A7921 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F391FE97D8100A1A5CB /* Version.swift */; };
+		A64E0825215022DC009A7921 /* BtAccessoryDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB3F2049FE3200AF1BFC /* BtAccessoryDevice.swift */; };
+		A64E0826215022DC009A7921 /* ZoopParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F3B1FE9811E00A1A5CB /* ZoopParameters.swift */; };
+		A64E0827215022DC009A7921 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83D81F962D2500D21B71 /* Connection.swift */; };
+		A64E0828215022DC009A7921 /* ZoopSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0980151FB4E8A40051C914 /* ZoopSignatureView.swift */; };
+		A64E0829215022DC009A7921 /* ReceiptSendType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B0E351FFEB2D300014B07 /* ReceiptSendType.swift */; };
+		A64E082A215022DC009A7921 /* LogDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68B9A31202E156800F717B8 /* LogDispatcher.swift */; };
+		A64E082B215022DC009A7921 /* ZoopAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD62C801F97E53B000C8ED4 /* ZoopAPI.swift */; };
+		A64E082C215022DC009A7921 /* ZoopMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BDA8200626A7000A8005 /* ZoopMethod.swift */; };
+		A64E082D215022DC009A7921 /* ExtraCardInformationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83DA1F96353000D21B71 /* ExtraCardInformationProtocol.swift */; };
+		A64E082E215022DC009A7921 /* ZoopSDKErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68B9A33202E2C2E00F717B8 /* ZoopSDKErrorHandler.swift */; };
+		A64E082F215022DC009A7921 /* SQLiteStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F311FE9783300A1A5CB /* SQLiteStatement.swift */; };
+		A64E0830215022DC009A7921 /* BtLeDeviceFinderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB382049A03800AF1BFC /* BtLeDeviceFinderProtocol.swift */; };
+		A64E0831215022DC009A7921 /* WebsocketTimeoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DEAE61FBA058200CD39AF /* WebsocketTimeoutProtocol.swift */; };
+		A64E0832215022DC009A7921 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BDA551F978D2C00C660F7 /* String+Substring.swift */; };
+		A64E0833215022DC009A7921 /* TerminalListManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC187A61F8F929200E2AB65 /* TerminalListManagerProtocol.swift */; };
+		A64E0834215022DC009A7921 /* WebsocketObserverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B75351F902F6F0060CB14 /* WebsocketObserverProtocol.swift */; };
+		A64E0835215022DC009A7921 /* VoidTransactionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83DE1F965B4D00D21B71 /* VoidTransactionProtocol.swift */; };
+		A64E0836215022DC009A7921 /* BluetoothConnectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5A8E841F9D4607002D4025 /* BluetoothConnectionProtocol.swift */; };
+		A64E0837215022DC009A7921 /* TerminalPaymentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83DC1F9635E400D21B71 /* TerminalPaymentProtocol.swift */; };
+		A64E0838215022DC009A7921 /* Data+AppendingToFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6436C8320347A960091379C /* Data+AppendingToFile.swift */; };
+		A64E0839215022DC009A7921 /* ApplicationDisplayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83E01F965C7600D21B71 /* ApplicationDisplayProtocol.swift */; };
+		A64E083A215022DC009A7921 /* CRC16.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF50B3F91FA8AD4F0043595A /* CRC16.swift */; };
+		A64E083B215022DC009A7921 /* BtAcessoryDeviceFinderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB3D2049DD7800AF1BFC /* BtAcessoryDeviceFinderProtocol.swift */; };
+		A64E083C215022DC009A7921 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B752D1F9022540060CB14 /* WebSocket.swift */; };
+		A64E083D215022DC009A7921 /* SQLiteStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F301FE9783300A1A5CB /* SQLiteStatusCode.swift */; };
+		A64E083E215022DC009A7921 /* TransactionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51CC9FF2003EAC800F058B9 /* TransactionStatus.swift */; };
+		A64E083F215022DC009A7921 /* BtleDevicesUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB43204DE9D300AF1BFC /* BtleDevicesUUID.swift */; };
+		A64E0840215022DC009A7921 /* DevicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB2F2045BA7A00AF1BFC /* DevicesManager.swift */; };
+		A64E0841215022DC009A7921 /* TerminalMessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83E21F965D4600D21B71 /* TerminalMessageType.swift */; };
+		A64E0843215022DC009A7921 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFCEB312047101700AF1BFC /* CoreBluetooth.framework */; };
+		A64E0844215022DC009A7921 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFF2D181F8E8945005064BF /* ExternalAccessory.framework */; };
+		A64E0846215022DC009A7921 /* EADSessionController.h in Headers */ = {isa = PBXBuildFile; fileRef = CFC187491F8E8C2900E2AB65 /* EADSessionController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A64E0847215022DC009A7921 /* Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = CFC187511F8E919000E2AB65 /* Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A64E0848215022DC009A7921 /* EMVConnectiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = CFFF2CB01F8D5986005064BF /* EMVConnectiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A64E085121502396009A7921 /* WebsocketComm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B752E1F9022540060CB14 /* WebsocketComm.swift */; };
+		A64E085221502396009A7921 /* MessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83D61F962C4D00D21B71 /* MessageHandler.swift */; };
+		A64E085321502396009A7921 /* TerminalListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC1879D1F8EB14400E2AB65 /* TerminalListManager.swift */; };
+		A64E085421502396009A7921 /* ZoopTerminalVoidPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF60C21A1FA8D04D0000283F /* ZoopTerminalVoidPayment.swift */; };
+		A64E085521502396009A7921 /* ZoopTerminalTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD62C7E1F97E476000C8ED4 /* ZoopTerminalTransaction.swift */; };
+		A64E085621502396009A7921 /* PP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83C41F95194F00D21B71 /* PP.swift */; };
+		A64E085721502396009A7921 /* ZoopTerminalPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD62C821F97ED01000C8ED4 /* ZoopTerminalPayment.swift */; };
+		A64E085821502396009A7921 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB292045AAEC00AF1BFC /* Device.swift */; };
+		A64E085921502396009A7921 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B42772006901B0014B49D /* Query.swift */; };
+		A64E085A21502396009A7921 /* APISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F201FE9561200A1A5CB /* APISettings.swift */; };
+		A64E085B21502396009A7921 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFECB5461FACF51400F72756 /* Logger.swift */; };
+		A64E085C21502396009A7921 /* Date+miliseconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF68A85C1F9F7AD4001449EF /* Date+miliseconds.swift */; };
+		A64E085D21502396009A7921 /* PaymentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5189BC42065958600C64A1B /* PaymentType.swift */; };
+		A64E085E21502396009A7921 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64EE3971FF27962008F7CD4 /* Receipt.swift */; };
+		A64E085F21502396009A7921 /* TerminalProtocolChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B750F1F901DF20060CB14 /* TerminalProtocolChannel.swift */; };
+		A64E086021502396009A7921 /* BtAccesoryDeviceFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB3B2049D8DA00AF1BFC /* BtAccesoryDeviceFinder.swift */; };
+		A64E086121502396009A7921 /* EADSessionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC187481F8E8C2800E2AB65 /* EADSessionController.m */; };
+		A64E086221502396009A7921 /* BtLeDeviceFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB3620471B6F00AF1BFC /* BtLeDeviceFinder.swift */; };
+		A64E086321502396009A7921 /* BtLeDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB41204CE05300AF1BFC /* BtLeDevice.swift */; };
+		A64E086421502396009A7921 /* DeviceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB2D2045B9DA00AF1BFC /* DeviceProtocol.swift */; };
+		A64E086521502396009A7921 /* ZoopSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B0E2F1FFEAC7900014B07 /* ZoopSession.swift */; };
+		A64E086621502396009A7921 /* SQLiteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F321FE9783300A1A5CB /* SQLiteDatabase.swift */; };
+		A64E086721502396009A7921 /* CGPath+Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF992A6F1FB5D05A00780736 /* CGPath+Points.swift */; };
+		A64E086821502396009A7921 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F391FE97D8100A1A5CB /* Version.swift */; };
+		A64E086921502396009A7921 /* BtAccessoryDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB3F2049FE3200AF1BFC /* BtAccessoryDevice.swift */; };
+		A64E086A21502396009A7921 /* ZoopParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F3B1FE9811E00A1A5CB /* ZoopParameters.swift */; };
+		A64E086B21502396009A7921 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83D81F962D2500D21B71 /* Connection.swift */; };
+		A64E086C21502396009A7921 /* ZoopSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0980151FB4E8A40051C914 /* ZoopSignatureView.swift */; };
+		A64E086D21502396009A7921 /* ReceiptSendType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B0E351FFEB2D300014B07 /* ReceiptSendType.swift */; };
+		A64E086E21502396009A7921 /* LogDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68B9A31202E156800F717B8 /* LogDispatcher.swift */; };
+		A64E086F21502396009A7921 /* ZoopAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD62C801F97E53B000C8ED4 /* ZoopAPI.swift */; };
+		A64E087021502396009A7921 /* ZoopMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BDA8200626A7000A8005 /* ZoopMethod.swift */; };
+		A64E087121502396009A7921 /* ExtraCardInformationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83DA1F96353000D21B71 /* ExtraCardInformationProtocol.swift */; };
+		A64E087221502396009A7921 /* ZoopSDKErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68B9A33202E2C2E00F717B8 /* ZoopSDKErrorHandler.swift */; };
+		A64E087321502396009A7921 /* SQLiteStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F311FE9783300A1A5CB /* SQLiteStatement.swift */; };
+		A64E087421502396009A7921 /* BtLeDeviceFinderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB382049A03800AF1BFC /* BtLeDeviceFinderProtocol.swift */; };
+		A64E087521502396009A7921 /* WebsocketTimeoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DEAE61FBA058200CD39AF /* WebsocketTimeoutProtocol.swift */; };
+		A64E087621502396009A7921 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BDA551F978D2C00C660F7 /* String+Substring.swift */; };
+		A64E087721502396009A7921 /* TerminalListManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC187A61F8F929200E2AB65 /* TerminalListManagerProtocol.swift */; };
+		A64E087821502396009A7921 /* WebsocketObserverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B75351F902F6F0060CB14 /* WebsocketObserverProtocol.swift */; };
+		A64E087921502396009A7921 /* VoidTransactionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83DE1F965B4D00D21B71 /* VoidTransactionProtocol.swift */; };
+		A64E087A21502396009A7921 /* BluetoothConnectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5A8E841F9D4607002D4025 /* BluetoothConnectionProtocol.swift */; };
+		A64E087B21502396009A7921 /* TerminalPaymentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83DC1F9635E400D21B71 /* TerminalPaymentProtocol.swift */; };
+		A64E087C21502396009A7921 /* Data+AppendingToFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6436C8320347A960091379C /* Data+AppendingToFile.swift */; };
+		A64E087D21502396009A7921 /* ApplicationDisplayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83E01F965C7600D21B71 /* ApplicationDisplayProtocol.swift */; };
+		A64E087E21502396009A7921 /* CRC16.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF50B3F91FA8AD4F0043595A /* CRC16.swift */; };
+		A64E087F21502396009A7921 /* BtAcessoryDeviceFinderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB3D2049DD7800AF1BFC /* BtAcessoryDeviceFinderProtocol.swift */; };
+		A64E088021502396009A7921 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B752D1F9022540060CB14 /* WebSocket.swift */; };
+		A64E088121502396009A7921 /* SQLiteStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F301FE9783300A1A5CB /* SQLiteStatusCode.swift */; };
+		A64E088221502396009A7921 /* TransactionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51CC9FF2003EAC800F058B9 /* TransactionStatus.swift */; };
+		A64E088321502396009A7921 /* BtleDevicesUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB43204DE9D300AF1BFC /* BtleDevicesUUID.swift */; };
+		A64E088421502396009A7921 /* DevicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB2F2045BA7A00AF1BFC /* DevicesManager.swift */; };
+		A64E088521502396009A7921 /* TerminalMessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83E21F965D4600D21B71 /* TerminalMessageType.swift */; };
+		A64E088721502396009A7921 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFCEB312047101700AF1BFC /* CoreBluetooth.framework */; };
+		A64E088821502396009A7921 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFF2D181F8E8945005064BF /* ExternalAccessory.framework */; };
+		A64E088A21502396009A7921 /* EADSessionController.h in Headers */ = {isa = PBXBuildFile; fileRef = CFC187491F8E8C2900E2AB65 /* EADSessionController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A64E088B21502396009A7921 /* Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = CFC187511F8E919000E2AB65 /* Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A64E088C21502396009A7921 /* EMVConnectiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = CFFF2CB01F8D5986005064BF /* EMVConnectiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A64EE3981FF27962008F7CD4 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64EE3971FF27962008F7CD4 /* Receipt.swift */; };
+		A68B9A32202E156800F717B8 /* LogDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68B9A31202E156800F717B8 /* LogDispatcher.swift */; };
+		A68B9A34202E2C2E00F717B8 /* ZoopSDKErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68B9A33202E2C2E00F717B8 /* ZoopSDKErrorHandler.swift */; };
+		C5189BC52065958600C64A1B /* PaymentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5189BC42065958600C64A1B /* PaymentType.swift */; };
+		C51CCA002003EAC800F058B9 /* TransactionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51CC9FF2003EAC800F058B9 /* TransactionStatus.swift */; };
+		C55B42782006901B0014B49D /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B42772006901B0014B49D /* Query.swift */; };
+		C58B0E301FFEAC7900014B07 /* ZoopSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B0E2F1FFEAC7900014B07 /* ZoopSession.swift */; };
+		C58B0E361FFEB2D300014B07 /* ReceiptSendType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B0E351FFEB2D300014B07 /* ReceiptSendType.swift */; };
+		C5C7BDA9200626A7000A8005 /* ZoopMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BDA8200626A7000A8005 /* ZoopMethod.swift */; };
+		CEFCEB2A2045AAEC00AF1BFC /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB292045AAEC00AF1BFC /* Device.swift */; };
+		CEFCEB2E2045B9DA00AF1BFC /* DeviceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB2D2045B9DA00AF1BFC /* DeviceProtocol.swift */; };
+		CEFCEB302045BA7A00AF1BFC /* DevicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB2F2045BA7A00AF1BFC /* DevicesManager.swift */; };
+		CEFCEB3720471B6F00AF1BFC /* BtLeDeviceFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB3620471B6F00AF1BFC /* BtLeDeviceFinder.swift */; };
+		CEFCEB392049A03800AF1BFC /* BtLeDeviceFinderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB382049A03800AF1BFC /* BtLeDeviceFinderProtocol.swift */; };
+		CEFCEB3C2049D8DA00AF1BFC /* BtAccesoryDeviceFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB3B2049D8DA00AF1BFC /* BtAccesoryDeviceFinder.swift */; };
+		CEFCEB3E2049DD7800AF1BFC /* BtAcessoryDeviceFinderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB3D2049DD7800AF1BFC /* BtAcessoryDeviceFinderProtocol.swift */; };
+		CEFCEB402049FE3200AF1BFC /* BtAccessoryDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB3F2049FE3200AF1BFC /* BtAccessoryDevice.swift */; };
+		CEFCEB42204CE05300AF1BFC /* BtLeDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB41204CE05300AF1BFC /* BtLeDevice.swift */; };
+		CEFCEB44204DE9D300AF1BFC /* BtleDevicesUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB43204DE9D300AF1BFC /* BtleDevicesUUID.swift */; };
+		CF0980161FB4E8A40051C914 /* ZoopSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0980151FB4E8A40051C914 /* ZoopSignatureView.swift */; };
+		CF3B75101F901DF20060CB14 /* TerminalProtocolChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B750F1F901DF20060CB14 /* TerminalProtocolChannel.swift */; };
+		CF3B752F1F9022540060CB14 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B752D1F9022540060CB14 /* WebSocket.swift */; };
+		CF3B75301F9022540060CB14 /* WebsocketComm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B752E1F9022540060CB14 /* WebsocketComm.swift */; };
+		CF3B75361F902F6F0060CB14 /* WebsocketObserverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B75351F902F6F0060CB14 /* WebsocketObserverProtocol.swift */; };
+		CF50B3FA1FA8AD4F0043595A /* CRC16.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF50B3F91FA8AD4F0043595A /* CRC16.swift */; };
+		CF5A8E851F9D4608002D4025 /* BluetoothConnectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5A8E841F9D4607002D4025 /* BluetoothConnectionProtocol.swift */; };
+		CF5BDA561F978D2C00C660F7 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BDA551F978D2C00C660F7 /* String+Substring.swift */; };
+		CF60C21B1FA8D04D0000283F /* ZoopTerminalVoidPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF60C21A1FA8D04D0000283F /* ZoopTerminalVoidPayment.swift */; };
+		CF68A85D1F9F7AD5001449EF /* Date+miliseconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF68A85C1F9F7AD4001449EF /* Date+miliseconds.swift */; };
+		CF992A701FB5D05A00780736 /* CGPath+Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF992A6F1FB5D05A00780736 /* CGPath+Points.swift */; };
+		CFC1874C1F8E8C2900E2AB65 /* EADSessionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC187481F8E8C2800E2AB65 /* EADSessionController.m */; };
+		CFC1874D1F8E8C2900E2AB65 /* EADSessionController.h in Headers */ = {isa = PBXBuildFile; fileRef = CFC187491F8E8C2900E2AB65 /* EADSessionController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFC187521F8E919000E2AB65 /* Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = CFC187511F8E919000E2AB65 /* Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFC1879E1F8EB14500E2AB65 /* TerminalListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC1879D1F8EB14400E2AB65 /* TerminalListManager.swift */; };
+		CFC187A71F8F929200E2AB65 /* TerminalListManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC187A61F8F929200E2AB65 /* TerminalListManagerProtocol.swift */; };
+		CFCA83C51F95194F00D21B71 /* PP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83C41F95194F00D21B71 /* PP.swift */; };
+		CFCA83D71F962C4D00D21B71 /* MessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83D61F962C4D00D21B71 /* MessageHandler.swift */; };
+		CFCA83D91F962D2500D21B71 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83D81F962D2500D21B71 /* Connection.swift */; };
+		CFCA83DB1F96353000D21B71 /* ExtraCardInformationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83DA1F96353000D21B71 /* ExtraCardInformationProtocol.swift */; };
+		CFCA83DD1F9635E400D21B71 /* TerminalPaymentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83DC1F9635E400D21B71 /* TerminalPaymentProtocol.swift */; };
+		CFCA83DF1F965B4E00D21B71 /* VoidTransactionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83DE1F965B4D00D21B71 /* VoidTransactionProtocol.swift */; };
+		CFCA83E11F965C7600D21B71 /* ApplicationDisplayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83E01F965C7600D21B71 /* ApplicationDisplayProtocol.swift */; };
+		CFCA83E31F965D4600D21B71 /* TerminalMessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA83E21F965D4600D21B71 /* TerminalMessageType.swift */; };
+		CFD62C7F1F97E476000C8ED4 /* ZoopTerminalTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD62C7E1F97E476000C8ED4 /* ZoopTerminalTransaction.swift */; };
+		CFD62C811F97E53B000C8ED4 /* ZoopAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD62C801F97E53B000C8ED4 /* ZoopAPI.swift */; };
+		CFD62C831F97ED01000C8ED4 /* ZoopTerminalPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD62C821F97ED01000C8ED4 /* ZoopTerminalPayment.swift */; };
+		CFECB5471FACF51400F72756 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFECB5461FACF51400F72756 /* Logger.swift */; };
+		CFFF2CB71F8D5986005064BF /* EMVConnectiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFF2CAD1F8D5986005064BF /* EMVConnectiOS.framework */; };
+		CFFF2CBC1F8D5986005064BF /* EMVConnectiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFF2CBB1F8D5986005064BF /* EMVConnectiOSTests.swift */; };
+		CFFF2CBE1F8D5986005064BF /* EMVConnectiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = CFFF2CB01F8D5986005064BF /* EMVConnectiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED0D76B5231FFF7B00AF29E0 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0D76B4231FFF7B00AF29E0 /* Url.swift */; };
+		EDB443F922A6987400384A22 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFCEB312047101700AF1BFC /* CoreBluetooth.framework */; };
+		EDB443FA22A6988200384A22 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFF2D181F8E8945005064BF /* ExternalAccessory.framework */; };
+		F5833F211FE9561200A1A5CB /* APISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F201FE9561200A1A5CB /* APISettings.swift */; };
+		F5833F341FE9783300A1A5CB /* SQLiteStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F301FE9783300A1A5CB /* SQLiteStatusCode.swift */; };
+		F5833F351FE9783300A1A5CB /* SQLiteStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F311FE9783300A1A5CB /* SQLiteStatement.swift */; };
+		F5833F361FE9783300A1A5CB /* SQLiteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F321FE9783300A1A5CB /* SQLiteDatabase.swift */; };
+		F5833F3A1FE97D8100A1A5CB /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F391FE97D8100A1A5CB /* Version.swift */; };
+		F5833F3C1FE9811E00A1A5CB /* ZoopParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833F3B1FE9811E00A1A5CB /* ZoopParameters.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CFFF2CB81F8D5986005064BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFFF2CA41F8D5986005064BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFFF2CAC1F8D5986005064BF;
+			remoteInfo = EMVConnectiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		848DEAE61FBA058200CD39AF /* WebsocketTimeoutProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsocketTimeoutProtocol.swift; sourceTree = "<group>"; };
+		A6436C8320347A960091379C /* Data+AppendingToFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+AppendingToFile.swift"; sourceTree = "<group>"; };
+		A64E084D215022DC009A7921 /* EMVConnectiOS-STAGING.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "EMVConnectiOS-STAGING.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A64E084E215022DC009A7921 /* EMVConnectiOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "EMVConnectiOS copy-Info.plist"; path = "/Users/carlagaldino/Documents/zoop-emv-connect-ios-sdk/EMVConnectiOS copy-Info.plist"; sourceTree = "<absolute>"; };
+		A64E089121502396009A7921 /* EMVConnectiOS-PROD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "EMVConnectiOS-PROD.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A64E089221502396009A7921 /* EMVConnectiOS copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "EMVConnectiOS copy2-Info.plist"; path = "/Users/carlagaldino/Documents/zoop-emv-connect-ios-sdk/EMVConnectiOS copy2-Info.plist"; sourceTree = "<absolute>"; };
+		A64EE3971FF27962008F7CD4 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
+		A68B9A31202E156800F717B8 /* LogDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDispatcher.swift; sourceTree = "<group>"; };
+		A68B9A33202E2C2E00F717B8 /* ZoopSDKErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoopSDKErrorHandler.swift; sourceTree = "<group>"; };
+		C5189BC42065958600C64A1B /* PaymentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentType.swift; sourceTree = "<group>"; };
+		C51CC9FD2003E9FD00F058B9 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		C51CC9FF2003EAC800F058B9 /* TransactionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStatus.swift; sourceTree = "<group>"; };
+		C55B42772006901B0014B49D /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		C58B0E291FFE9ED800014B07 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		C58B0E2F1FFEAC7900014B07 /* ZoopSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoopSession.swift; sourceTree = "<group>"; };
+		C58B0E351FFEB2D300014B07 /* ReceiptSendType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptSendType.swift; sourceTree = "<group>"; };
+		C5C7BDA8200626A7000A8005 /* ZoopMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoopMethod.swift; sourceTree = "<group>"; };
+		CEFCEB292045AAEC00AF1BFC /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		CEFCEB2D2045B9DA00AF1BFC /* DeviceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProtocol.swift; sourceTree = "<group>"; };
+		CEFCEB2F2045BA7A00AF1BFC /* DevicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesManager.swift; sourceTree = "<group>"; };
+		CEFCEB312047101700AF1BFC /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		CEFCEB3620471B6F00AF1BFC /* BtLeDeviceFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtLeDeviceFinder.swift; sourceTree = "<group>"; };
+		CEFCEB382049A03800AF1BFC /* BtLeDeviceFinderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtLeDeviceFinderProtocol.swift; sourceTree = "<group>"; };
+		CEFCEB3B2049D8DA00AF1BFC /* BtAccesoryDeviceFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtAccesoryDeviceFinder.swift; sourceTree = "<group>"; };
+		CEFCEB3D2049DD7800AF1BFC /* BtAcessoryDeviceFinderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtAcessoryDeviceFinderProtocol.swift; sourceTree = "<group>"; };
+		CEFCEB3F2049FE3200AF1BFC /* BtAccessoryDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtAccessoryDevice.swift; sourceTree = "<group>"; };
+		CEFCEB41204CE05300AF1BFC /* BtLeDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtLeDevice.swift; sourceTree = "<group>"; };
+		CEFCEB43204DE9D300AF1BFC /* BtleDevicesUUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtleDevicesUUID.swift; sourceTree = "<group>"; };
+		CF0980151FB4E8A40051C914 /* ZoopSignatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoopSignatureView.swift; sourceTree = "<group>"; };
+		CF3B750F1F901DF20060CB14 /* TerminalProtocolChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalProtocolChannel.swift; sourceTree = "<group>"; };
+		CF3B75251F90212A0060CB14 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		CF3B752D1F9022540060CB14 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = WebsocketCommLibrary/WebSocket.swift; sourceTree = "<group>"; };
+		CF3B752E1F9022540060CB14 /* WebsocketComm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebsocketComm.swift; path = WebsocketCommLibrary/WebsocketComm.swift; sourceTree = "<group>"; };
+		CF3B75351F902F6F0060CB14 /* WebsocketObserverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsocketObserverProtocol.swift; sourceTree = "<group>"; };
+		CF50B3F91FA8AD4F0043595A /* CRC16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRC16.swift; sourceTree = "<group>"; };
+		CF5A8E841F9D4607002D4025 /* BluetoothConnectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothConnectionProtocol.swift; sourceTree = "<group>"; };
+		CF5BDA551F978D2C00C660F7 /* String+Substring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Substring.swift"; sourceTree = "<group>"; };
+		CF60C21A1FA8D04D0000283F /* ZoopTerminalVoidPayment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoopTerminalVoidPayment.swift; sourceTree = "<group>"; };
+		CF68A85C1F9F7AD4001449EF /* Date+miliseconds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+miliseconds.swift"; sourceTree = "<group>"; };
+		CF992A6F1FB5D05A00780736 /* CGPath+Points.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPath+Points.swift"; sourceTree = "<group>"; };
+		CFC187481F8E8C2800E2AB65 /* EADSessionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EADSessionController.m; sourceTree = "<group>"; };
+		CFC187491F8E8C2900E2AB65 /* EADSessionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EADSessionController.h; sourceTree = "<group>"; };
+		CFC187511F8E919000E2AB65 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		CFC1879D1F8EB14400E2AB65 /* TerminalListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalListManager.swift; sourceTree = "<group>"; };
+		CFC187A61F8F929200E2AB65 /* TerminalListManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalListManagerProtocol.swift; sourceTree = "<group>"; };
+		CFCA83C41F95194F00D21B71 /* PP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PP.swift; sourceTree = "<group>"; };
+		CFCA83D61F962C4D00D21B71 /* MessageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHandler.swift; sourceTree = "<group>"; };
+		CFCA83D81F962D2500D21B71 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		CFCA83DA1F96353000D21B71 /* ExtraCardInformationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraCardInformationProtocol.swift; sourceTree = "<group>"; };
+		CFCA83DC1F9635E400D21B71 /* TerminalPaymentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalPaymentProtocol.swift; sourceTree = "<group>"; };
+		CFCA83DE1F965B4D00D21B71 /* VoidTransactionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoidTransactionProtocol.swift; sourceTree = "<group>"; };
+		CFCA83E01F965C7600D21B71 /* ApplicationDisplayProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDisplayProtocol.swift; sourceTree = "<group>"; };
+		CFCA83E21F965D4600D21B71 /* TerminalMessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalMessageType.swift; sourceTree = "<group>"; };
+		CFD62C7E1F97E476000C8ED4 /* ZoopTerminalTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoopTerminalTransaction.swift; sourceTree = "<group>"; };
+		CFD62C801F97E53B000C8ED4 /* ZoopAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoopAPI.swift; sourceTree = "<group>"; };
+		CFD62C821F97ED01000C8ED4 /* ZoopTerminalPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoopTerminalPayment.swift; sourceTree = "<group>"; };
+		CFECB5461FACF51400F72756 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		CFFF2CAD1F8D5986005064BF /* EMVConnectiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EMVConnectiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFFF2CB01F8D5986005064BF /* EMVConnectiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMVConnectiOS.h; sourceTree = "<group>"; };
+		CFFF2CB11F8D5986005064BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFFF2CB61F8D5986005064BF /* EMVConnectiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EMVConnectiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFFF2CBB1F8D5986005064BF /* EMVConnectiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMVConnectiOSTests.swift; sourceTree = "<group>"; };
+		CFFF2CBD1F8D5986005064BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFFF2D181F8E8945005064BF /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		ED0D76B4231FFF7B00AF29E0 /* Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
+		F5833F201FE9561200A1A5CB /* APISettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISettings.swift; sourceTree = "<group>"; };
+		F5833F301FE9783300A1A5CB /* SQLiteStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteStatusCode.swift; sourceTree = "<group>"; };
+		F5833F311FE9783300A1A5CB /* SQLiteStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteStatement.swift; sourceTree = "<group>"; };
+		F5833F321FE9783300A1A5CB /* SQLiteDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDatabase.swift; sourceTree = "<group>"; };
+		F5833F371FE9787600A1A5CB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F5833F391FE97D8100A1A5CB /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		F5833F3B1FE9811E00A1A5CB /* ZoopParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoopParameters.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A64E0842215022DC009A7921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A64E0843215022DC009A7921 /* CoreBluetooth.framework in Frameworks */,
+				A64E0844215022DC009A7921 /* ExternalAccessory.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A64E088621502396009A7921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A64E088721502396009A7921 /* CoreBluetooth.framework in Frameworks */,
+				A64E088821502396009A7921 /* ExternalAccessory.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFF2CA91F8D5986005064BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB443FA22A6988200384A22 /* ExternalAccessory.framework in Frameworks */,
+				EDB443F922A6987400384A22 /* CoreBluetooth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFF2CB31F8D5986005064BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFFF2CB71F8D5986005064BF /* EMVConnectiOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A68B9A30202E14DB00F717B8 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				CFECB5461FACF51400F72756 /* Logger.swift */,
+				A68B9A31202E156800F717B8 /* LogDispatcher.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		CEFCEB282045AA8400AF1BFC /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				CEFCEB3A2049D84300AF1BFC /* btAccessory */,
+				CEFCEB3420471B4A00AF1BFC /* btle */,
+				CEFCEB2C2045B9B500AF1BFC /* old */,
+				CEFCEB292045AAEC00AF1BFC /* Device.swift */,
+				CEFCEB2D2045B9DA00AF1BFC /* DeviceProtocol.swift */,
+				CEFCEB2F2045BA7A00AF1BFC /* DevicesManager.swift */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		CEFCEB2C2045B9B500AF1BFC /* old */ = {
+			isa = PBXGroup;
+			children = (
+				CFC1879D1F8EB14400E2AB65 /* TerminalListManager.swift */,
+				CFC187A61F8F929200E2AB65 /* TerminalListManagerProtocol.swift */,
+			);
+			path = old;
+			sourceTree = "<group>";
+		};
+		CEFCEB3420471B4A00AF1BFC /* btle */ = {
+			isa = PBXGroup;
+			children = (
+				CEFCEB3620471B6F00AF1BFC /* BtLeDeviceFinder.swift */,
+				CEFCEB382049A03800AF1BFC /* BtLeDeviceFinderProtocol.swift */,
+				CEFCEB41204CE05300AF1BFC /* BtLeDevice.swift */,
+				CEFCEB43204DE9D300AF1BFC /* BtleDevicesUUID.swift */,
+			);
+			path = btle;
+			sourceTree = "<group>";
+		};
+		CEFCEB3A2049D84300AF1BFC /* btAccessory */ = {
+			isa = PBXGroup;
+			children = (
+				CEFCEB3B2049D8DA00AF1BFC /* BtAccesoryDeviceFinder.swift */,
+				CEFCEB3D2049DD7800AF1BFC /* BtAcessoryDeviceFinderProtocol.swift */,
+				CEFCEB3F2049FE3200AF1BFC /* BtAccessoryDevice.swift */,
+			);
+			path = btAccessory;
+			sourceTree = "<group>";
+		};
+		CF0980141FB4E85B0051C914 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				CF0980151FB4E8A40051C914 /* ZoopSignatureView.swift */,
+				F5833F391FE97D8100A1A5CB /* Version.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		CF3B752C1F9022330060CB14 /* WebsocketCommLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				CF3B752D1F9022540060CB14 /* WebSocket.swift */,
+				CF3B752E1F9022540060CB14 /* WebsocketComm.swift */,
+			);
+			name = WebsocketCommLibrary;
+			sourceTree = "<group>";
+		};
+		CF50B3F81FA8AD360043595A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A68B9A30202E14DB00F717B8 /* Log */,
+				F5833F2E1FE977F600A1A5CB /* SQLite */,
+				CF50B3F91FA8AD4F0043595A /* CRC16.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		CF5BDA541F978C9000C660F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CF5BDA551F978D2C00C660F7 /* String+Substring.swift */,
+				CF68A85C1F9F7AD4001449EF /* Date+miliseconds.swift */,
+				CF992A6F1FB5D05A00780736 /* CGPath+Points.swift */,
+				A6436C8320347A960091379C /* Data+AppendingToFile.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CFC187A51F8F926F00E2AB65 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CFCA83DC1F9635E400D21B71 /* TerminalPaymentProtocol.swift */,
+				CF3B75351F902F6F0060CB14 /* WebsocketObserverProtocol.swift */,
+				CFCA83DA1F96353000D21B71 /* ExtraCardInformationProtocol.swift */,
+				CFCA83DE1F965B4D00D21B71 /* VoidTransactionProtocol.swift */,
+				CFCA83E01F965C7600D21B71 /* ApplicationDisplayProtocol.swift */,
+				CF5A8E841F9D4607002D4025 /* BluetoothConnectionProtocol.swift */,
+				848DEAE61FBA058200CD39AF /* WebsocketTimeoutProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CFCA83E41F96627600D21B71 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				CFCA83C41F95194F00D21B71 /* PP.swift */,
+				CFCA83E21F965D4600D21B71 /* TerminalMessageType.swift */,
+				C58B0E351FFEB2D300014B07 /* ReceiptSendType.swift */,
+				C51CC9FF2003EAC800F058B9 /* TransactionStatus.swift */,
+				C5C7BDA8200626A7000A8005 /* ZoopMethod.swift */,
+				C55B42772006901B0014B49D /* Query.swift */,
+				C5189BC42065958600C64A1B /* PaymentType.swift */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		CFD62C7D1F97E45A000C8ED4 /* Zoop */ = {
+			isa = PBXGroup;
+			children = (
+				CF60C21A1FA8D04D0000283F /* ZoopTerminalVoidPayment.swift */,
+				CFD62C7E1F97E476000C8ED4 /* ZoopTerminalTransaction.swift */,
+				CFD62C801F97E53B000C8ED4 /* ZoopAPI.swift */,
+				CFD62C821F97ED01000C8ED4 /* ZoopTerminalPayment.swift */,
+				A64EE3971FF27962008F7CD4 /* Receipt.swift */,
+				C58B0E2F1FFEAC7900014B07 /* ZoopSession.swift */,
+				A68B9A33202E2C2E00F717B8 /* ZoopSDKErrorHandler.swift */,
+			);
+			path = Zoop;
+			sourceTree = "<group>";
+		};
+		CFFF2CA31F8D5986005064BF = {
+			isa = PBXGroup;
+			children = (
+				F5833F1F1FE955E700A1A5CB /* commons */,
+				CFFF2CAF1F8D5986005064BF /* EMVConnectiOS */,
+				CFFF2CBA1F8D5986005064BF /* EMVConnectiOSTests */,
+				CFFF2CAE1F8D5986005064BF /* Products */,
+				CFFF2D171F8E8945005064BF /* Frameworks */,
+				F51AECC91FF3E197005406D4 /* Recovered References */,
+				A64E084E215022DC009A7921 /* EMVConnectiOS copy-Info.plist */,
+				A64E089221502396009A7921 /* EMVConnectiOS copy2-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		CFFF2CAE1F8D5986005064BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFFF2CAD1F8D5986005064BF /* EMVConnectiOS.framework */,
+				CFFF2CB61F8D5986005064BF /* EMVConnectiOSTests.xctest */,
+				A64E084D215022DC009A7921 /* EMVConnectiOS-STAGING.framework */,
+				A64E089121502396009A7921 /* EMVConnectiOS-PROD.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFFF2CAF1F8D5986005064BF /* EMVConnectiOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEFCEB282045AA8400AF1BFC /* Devices */,
+				CF0980141FB4E85B0051C914 /* Api */,
+				CF50B3F81FA8AD360043595A /* Util */,
+				CFD62C7D1F97E45A000C8ED4 /* Zoop */,
+				CF5BDA541F978C9000C660F7 /* Extensions */,
+				CFCA83E41F96627600D21B71 /* Const */,
+				CF3B752C1F9022330060CB14 /* WebsocketCommLibrary */,
+				CFC187A51F8F926F00E2AB65 /* Protocols */,
+				CFFF2D0A1F8E86AA005064BF /* BluetoothCommLibrary */,
+				CFFF2CB01F8D5986005064BF /* EMVConnectiOS.h */,
+				CFFF2CB11F8D5986005064BF /* Info.plist */,
+				CF3B750F1F901DF20060CB14 /* TerminalProtocolChannel.swift */,
+				CFCA83D61F962C4D00D21B71 /* MessageHandler.swift */,
+				CFCA83D81F962D2500D21B71 /* Connection.swift */,
+				ED0D76B4231FFF7B00AF29E0 /* Url.swift */,
+			);
+			path = EMVConnectiOS;
+			sourceTree = "<group>";
+		};
+		CFFF2CBA1F8D5986005064BF /* EMVConnectiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFFF2CBB1F8D5986005064BF /* EMVConnectiOSTests.swift */,
+				CFFF2CBD1F8D5986005064BF /* Info.plist */,
+			);
+			path = EMVConnectiOSTests;
+			sourceTree = "<group>";
+		};
+		CFFF2D0A1F8E86AA005064BF /* BluetoothCommLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				CFC187511F8E919000E2AB65 /* Bridging-Header.h */,
+				CFC187491F8E8C2900E2AB65 /* EADSessionController.h */,
+				CFC187481F8E8C2800E2AB65 /* EADSessionController.m */,
+			);
+			path = BluetoothCommLibrary;
+			sourceTree = "<group>";
+		};
+		CFFF2D171F8E8945005064BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEFCEB312047101700AF1BFC /* CoreBluetooth.framework */,
+				C51CC9FD2003E9FD00F058B9 /* SwiftyJSON.framework */,
+				C58B0E291FFE9ED800014B07 /* Alamofire.framework */,
+				F5833F371FE9787600A1A5CB /* libsqlite3.tbd */,
+				CF3B75251F90212A0060CB14 /* libz.tbd */,
+				CFFF2D181F8E8945005064BF /* ExternalAccessory.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F51AECC91FF3E197005406D4 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		F5833F1F1FE955E700A1A5CB /* commons */ = {
+			isa = PBXGroup;
+			children = (
+				F5833F201FE9561200A1A5CB /* APISettings.swift */,
+				F5833F3B1FE9811E00A1A5CB /* ZoopParameters.swift */,
+			);
+			path = commons;
+			sourceTree = "<group>";
+		};
+		F5833F2E1FE977F600A1A5CB /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				F5833F321FE9783300A1A5CB /* SQLiteDatabase.swift */,
+				F5833F311FE9783300A1A5CB /* SQLiteStatement.swift */,
+				F5833F301FE9783300A1A5CB /* SQLiteStatusCode.swift */,
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A64E0845215022DC009A7921 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A64E0846215022DC009A7921 /* EADSessionController.h in Headers */,
+				A64E0847215022DC009A7921 /* Bridging-Header.h in Headers */,
+				A64E0848215022DC009A7921 /* EMVConnectiOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A64E088921502396009A7921 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A64E088A21502396009A7921 /* EADSessionController.h in Headers */,
+				A64E088B21502396009A7921 /* Bridging-Header.h in Headers */,
+				A64E088C21502396009A7921 /* EMVConnectiOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFF2CAA1F8D5986005064BF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFC1874D1F8E8C2900E2AB65 /* EADSessionController.h in Headers */,
+				CFC187521F8E919000E2AB65 /* Bridging-Header.h in Headers */,
+				CFFF2CBE1F8D5986005064BF /* EMVConnectiOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A64E080B215022DC009A7921 /* EMVConnectiOS-STAGING */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A64E084A215022DC009A7921 /* Build configuration list for PBXNativeTarget "EMVConnectiOS-STAGING" */;
+			buildPhases = (
+				A64E080C215022DC009A7921 /* Sources */,
+				A64E0842215022DC009A7921 /* Frameworks */,
+				A64E0845215022DC009A7921 /* Headers */,
+				A64E0849215022DC009A7921 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EMVConnectiOS-STAGING";
+			productName = EMVConnectiOS;
+			productReference = A64E084D215022DC009A7921 /* EMVConnectiOS-STAGING.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A64E084F21502396009A7921 /* EMVConnectiOS-PROD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A64E088E21502396009A7921 /* Build configuration list for PBXNativeTarget "EMVConnectiOS-PROD" */;
+			buildPhases = (
+				A64E085021502396009A7921 /* Sources */,
+				A64E088621502396009A7921 /* Frameworks */,
+				A64E088921502396009A7921 /* Headers */,
+				A64E088D21502396009A7921 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EMVConnectiOS-PROD";
+			productName = EMVConnectiOS;
+			productReference = A64E089121502396009A7921 /* EMVConnectiOS-PROD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CFFF2CAC1F8D5986005064BF /* EMVConnectiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFFF2CC11F8D5986005064BF /* Build configuration list for PBXNativeTarget "EMVConnectiOS" */;
+			buildPhases = (
+				CFFF2CA81F8D5986005064BF /* Sources */,
+				CFFF2CA91F8D5986005064BF /* Frameworks */,
+				CFFF2CAA1F8D5986005064BF /* Headers */,
+				CFFF2CAB1F8D5986005064BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EMVConnectiOS;
+			productName = EMVConnectiOS;
+			productReference = CFFF2CAD1F8D5986005064BF /* EMVConnectiOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CFFF2CB51F8D5986005064BF /* EMVConnectiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFFF2CC41F8D5986005064BF /* Build configuration list for PBXNativeTarget "EMVConnectiOSTests" */;
+			buildPhases = (
+				CFFF2CB21F8D5986005064BF /* Sources */,
+				CFFF2CB31F8D5986005064BF /* Frameworks */,
+				CFFF2CB41F8D5986005064BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFFF2CB91F8D5986005064BF /* PBXTargetDependency */,
+			);
+			name = EMVConnectiOSTests;
+			productName = EMVConnectiOSTests;
+			productReference = CFFF2CB61F8D5986005064BF /* EMVConnectiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFFF2CA41F8D5986005064BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Carla Galdino Wanderley";
+				TargetAttributes = {
+					A64E080B215022DC009A7921 = {
+						ProvisioningStyle = Automatic;
+					};
+					A64E084F21502396009A7921 = {
+						ProvisioningStyle = Automatic;
+					};
+					CFB777641FAA223C007DD0AD = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					CFFF2CAC1F8D5986005064BF = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+					CFFF2CB51F8D5986005064BF = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CFFF2CA71F8D5986005064BF /* Build configuration list for PBXProject "EMVConnectiOS" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CFFF2CA31F8D5986005064BF;
+			productRefGroup = CFFF2CAE1F8D5986005064BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFFF2CAC1F8D5986005064BF /* EMVConnectiOS */,
+				CFFF2CB51F8D5986005064BF /* EMVConnectiOSTests */,
+				CFB777641FAA223C007DD0AD /* EMVConnectiOS-Universal */,
+				A64E080B215022DC009A7921 /* EMVConnectiOS-STAGING */,
+				A64E084F21502396009A7921 /* EMVConnectiOS-PROD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A64E0849215022DC009A7921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A64E088D21502396009A7921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFF2CAB1F8D5986005064BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFF2CB41F8D5986005064BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CFB777681FAA2258007DD0AD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=false\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      if [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\n                                                                      cp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      ######################\n                                                                      # On Release, copy the result to release directory\n                                                                      ######################\n                                                                      OUTPUT_DIR=\"${PROJECT_DIR}/Output/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n                                                                      \n                                                                      rm -rf \"$OUTPUT_DIR\"\n                                                                      mkdir -p \"$OUTPUT_DIR\"\n                                                                      \n                                                                      cp -r \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\n                                                                      \n                                                                      if [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\n                                                                      open \"${OUTPUT_DIR}/\"\n                                                                      fi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A64E080C215022DC009A7921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A64E080D215022DC009A7921 /* WebsocketComm.swift in Sources */,
+				A64E080E215022DC009A7921 /* MessageHandler.swift in Sources */,
+				A64E080F215022DC009A7921 /* TerminalListManager.swift in Sources */,
+				A64E0810215022DC009A7921 /* ZoopTerminalVoidPayment.swift in Sources */,
+				A64E0811215022DC009A7921 /* ZoopTerminalTransaction.swift in Sources */,
+				A64E0812215022DC009A7921 /* PP.swift in Sources */,
+				A64E0813215022DC009A7921 /* ZoopTerminalPayment.swift in Sources */,
+				A64E0814215022DC009A7921 /* Device.swift in Sources */,
+				A64E0815215022DC009A7921 /* Query.swift in Sources */,
+				A64E0816215022DC009A7921 /* APISettings.swift in Sources */,
+				A64E0817215022DC009A7921 /* Logger.swift in Sources */,
+				A64E0818215022DC009A7921 /* Date+miliseconds.swift in Sources */,
+				A64E0819215022DC009A7921 /* PaymentType.swift in Sources */,
+				A64E081A215022DC009A7921 /* Receipt.swift in Sources */,
+				A64E081B215022DC009A7921 /* TerminalProtocolChannel.swift in Sources */,
+				A64E081C215022DC009A7921 /* BtAccesoryDeviceFinder.swift in Sources */,
+				A64E081D215022DC009A7921 /* EADSessionController.m in Sources */,
+				A64E081E215022DC009A7921 /* BtLeDeviceFinder.swift in Sources */,
+				A64E081F215022DC009A7921 /* BtLeDevice.swift in Sources */,
+				A64E0820215022DC009A7921 /* DeviceProtocol.swift in Sources */,
+				A64E0821215022DC009A7921 /* ZoopSession.swift in Sources */,
+				A64E0822215022DC009A7921 /* SQLiteDatabase.swift in Sources */,
+				A64E0823215022DC009A7921 /* CGPath+Points.swift in Sources */,
+				A64E0824215022DC009A7921 /* Version.swift in Sources */,
+				A64E0825215022DC009A7921 /* BtAccessoryDevice.swift in Sources */,
+				A64E0826215022DC009A7921 /* ZoopParameters.swift in Sources */,
+				A64E0827215022DC009A7921 /* Connection.swift in Sources */,
+				A64E0828215022DC009A7921 /* ZoopSignatureView.swift in Sources */,
+				A64E0829215022DC009A7921 /* ReceiptSendType.swift in Sources */,
+				A64E082A215022DC009A7921 /* LogDispatcher.swift in Sources */,
+				A64E082B215022DC009A7921 /* ZoopAPI.swift in Sources */,
+				A64E082C215022DC009A7921 /* ZoopMethod.swift in Sources */,
+				A64E082D215022DC009A7921 /* ExtraCardInformationProtocol.swift in Sources */,
+				A64E082E215022DC009A7921 /* ZoopSDKErrorHandler.swift in Sources */,
+				A64E082F215022DC009A7921 /* SQLiteStatement.swift in Sources */,
+				A64E0830215022DC009A7921 /* BtLeDeviceFinderProtocol.swift in Sources */,
+				A64E0831215022DC009A7921 /* WebsocketTimeoutProtocol.swift in Sources */,
+				A64E0832215022DC009A7921 /* String+Substring.swift in Sources */,
+				A64E0833215022DC009A7921 /* TerminalListManagerProtocol.swift in Sources */,
+				A64E0834215022DC009A7921 /* WebsocketObserverProtocol.swift in Sources */,
+				A64E0835215022DC009A7921 /* VoidTransactionProtocol.swift in Sources */,
+				A64E0836215022DC009A7921 /* BluetoothConnectionProtocol.swift in Sources */,
+				A64E0837215022DC009A7921 /* TerminalPaymentProtocol.swift in Sources */,
+				A64E0838215022DC009A7921 /* Data+AppendingToFile.swift in Sources */,
+				A64E0839215022DC009A7921 /* ApplicationDisplayProtocol.swift in Sources */,
+				A64E083A215022DC009A7921 /* CRC16.swift in Sources */,
+				A64E083B215022DC009A7921 /* BtAcessoryDeviceFinderProtocol.swift in Sources */,
+				A64E083C215022DC009A7921 /* WebSocket.swift in Sources */,
+				A64E083D215022DC009A7921 /* SQLiteStatusCode.swift in Sources */,
+				A64E083E215022DC009A7921 /* TransactionStatus.swift in Sources */,
+				A64E083F215022DC009A7921 /* BtleDevicesUUID.swift in Sources */,
+				A64E0840215022DC009A7921 /* DevicesManager.swift in Sources */,
+				A64E0841215022DC009A7921 /* TerminalMessageType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A64E085021502396009A7921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A64E085121502396009A7921 /* WebsocketComm.swift in Sources */,
+				A64E085221502396009A7921 /* MessageHandler.swift in Sources */,
+				A64E085321502396009A7921 /* TerminalListManager.swift in Sources */,
+				A64E085421502396009A7921 /* ZoopTerminalVoidPayment.swift in Sources */,
+				A64E085521502396009A7921 /* ZoopTerminalTransaction.swift in Sources */,
+				A64E085621502396009A7921 /* PP.swift in Sources */,
+				A64E085721502396009A7921 /* ZoopTerminalPayment.swift in Sources */,
+				A64E085821502396009A7921 /* Device.swift in Sources */,
+				A64E085921502396009A7921 /* Query.swift in Sources */,
+				A64E085A21502396009A7921 /* APISettings.swift in Sources */,
+				A64E085B21502396009A7921 /* Logger.swift in Sources */,
+				A64E085C21502396009A7921 /* Date+miliseconds.swift in Sources */,
+				A64E085D21502396009A7921 /* PaymentType.swift in Sources */,
+				A64E085E21502396009A7921 /* Receipt.swift in Sources */,
+				A64E085F21502396009A7921 /* TerminalProtocolChannel.swift in Sources */,
+				A64E086021502396009A7921 /* BtAccesoryDeviceFinder.swift in Sources */,
+				A64E086121502396009A7921 /* EADSessionController.m in Sources */,
+				A64E086221502396009A7921 /* BtLeDeviceFinder.swift in Sources */,
+				A64E086321502396009A7921 /* BtLeDevice.swift in Sources */,
+				A64E086421502396009A7921 /* DeviceProtocol.swift in Sources */,
+				A64E086521502396009A7921 /* ZoopSession.swift in Sources */,
+				A64E086621502396009A7921 /* SQLiteDatabase.swift in Sources */,
+				A64E086721502396009A7921 /* CGPath+Points.swift in Sources */,
+				A64E086821502396009A7921 /* Version.swift in Sources */,
+				A64E086921502396009A7921 /* BtAccessoryDevice.swift in Sources */,
+				A64E086A21502396009A7921 /* ZoopParameters.swift in Sources */,
+				A64E086B21502396009A7921 /* Connection.swift in Sources */,
+				A64E086C21502396009A7921 /* ZoopSignatureView.swift in Sources */,
+				A64E086D21502396009A7921 /* ReceiptSendType.swift in Sources */,
+				A64E086E21502396009A7921 /* LogDispatcher.swift in Sources */,
+				A64E086F21502396009A7921 /* ZoopAPI.swift in Sources */,
+				A64E087021502396009A7921 /* ZoopMethod.swift in Sources */,
+				A64E087121502396009A7921 /* ExtraCardInformationProtocol.swift in Sources */,
+				A64E087221502396009A7921 /* ZoopSDKErrorHandler.swift in Sources */,
+				A64E087321502396009A7921 /* SQLiteStatement.swift in Sources */,
+				A64E087421502396009A7921 /* BtLeDeviceFinderProtocol.swift in Sources */,
+				A64E087521502396009A7921 /* WebsocketTimeoutProtocol.swift in Sources */,
+				A64E087621502396009A7921 /* String+Substring.swift in Sources */,
+				A64E087721502396009A7921 /* TerminalListManagerProtocol.swift in Sources */,
+				A64E087821502396009A7921 /* WebsocketObserverProtocol.swift in Sources */,
+				A64E087921502396009A7921 /* VoidTransactionProtocol.swift in Sources */,
+				A64E087A21502396009A7921 /* BluetoothConnectionProtocol.swift in Sources */,
+				A64E087B21502396009A7921 /* TerminalPaymentProtocol.swift in Sources */,
+				A64E087C21502396009A7921 /* Data+AppendingToFile.swift in Sources */,
+				A64E087D21502396009A7921 /* ApplicationDisplayProtocol.swift in Sources */,
+				A64E087E21502396009A7921 /* CRC16.swift in Sources */,
+				A64E087F21502396009A7921 /* BtAcessoryDeviceFinderProtocol.swift in Sources */,
+				A64E088021502396009A7921 /* WebSocket.swift in Sources */,
+				A64E088121502396009A7921 /* SQLiteStatusCode.swift in Sources */,
+				A64E088221502396009A7921 /* TransactionStatus.swift in Sources */,
+				A64E088321502396009A7921 /* BtleDevicesUUID.swift in Sources */,
+				A64E088421502396009A7921 /* DevicesManager.swift in Sources */,
+				A64E088521502396009A7921 /* TerminalMessageType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFF2CA81F8D5986005064BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF3B75301F9022540060CB14 /* WebsocketComm.swift in Sources */,
+				CFCA83D71F962C4D00D21B71 /* MessageHandler.swift in Sources */,
+				CFC1879E1F8EB14500E2AB65 /* TerminalListManager.swift in Sources */,
+				CF60C21B1FA8D04D0000283F /* ZoopTerminalVoidPayment.swift in Sources */,
+				CFD62C7F1F97E476000C8ED4 /* ZoopTerminalTransaction.swift in Sources */,
+				CFCA83C51F95194F00D21B71 /* PP.swift in Sources */,
+				CFD62C831F97ED01000C8ED4 /* ZoopTerminalPayment.swift in Sources */,
+				CEFCEB2A2045AAEC00AF1BFC /* Device.swift in Sources */,
+				C55B42782006901B0014B49D /* Query.swift in Sources */,
+				F5833F211FE9561200A1A5CB /* APISettings.swift in Sources */,
+				CFECB5471FACF51400F72756 /* Logger.swift in Sources */,
+				CF68A85D1F9F7AD5001449EF /* Date+miliseconds.swift in Sources */,
+				C5189BC52065958600C64A1B /* PaymentType.swift in Sources */,
+				ED0D76B5231FFF7B00AF29E0 /* Url.swift in Sources */,
+				A64EE3981FF27962008F7CD4 /* Receipt.swift in Sources */,
+				CF3B75101F901DF20060CB14 /* TerminalProtocolChannel.swift in Sources */,
+				CEFCEB3C2049D8DA00AF1BFC /* BtAccesoryDeviceFinder.swift in Sources */,
+				CFC1874C1F8E8C2900E2AB65 /* EADSessionController.m in Sources */,
+				CEFCEB3720471B6F00AF1BFC /* BtLeDeviceFinder.swift in Sources */,
+				CEFCEB42204CE05300AF1BFC /* BtLeDevice.swift in Sources */,
+				CEFCEB2E2045B9DA00AF1BFC /* DeviceProtocol.swift in Sources */,
+				C58B0E301FFEAC7900014B07 /* ZoopSession.swift in Sources */,
+				F5833F361FE9783300A1A5CB /* SQLiteDatabase.swift in Sources */,
+				CF992A701FB5D05A00780736 /* CGPath+Points.swift in Sources */,
+				F5833F3A1FE97D8100A1A5CB /* Version.swift in Sources */,
+				CEFCEB402049FE3200AF1BFC /* BtAccessoryDevice.swift in Sources */,
+				F5833F3C1FE9811E00A1A5CB /* ZoopParameters.swift in Sources */,
+				CFCA83D91F962D2500D21B71 /* Connection.swift in Sources */,
+				CF0980161FB4E8A40051C914 /* ZoopSignatureView.swift in Sources */,
+				C58B0E361FFEB2D300014B07 /* ReceiptSendType.swift in Sources */,
+				A68B9A32202E156800F717B8 /* LogDispatcher.swift in Sources */,
+				CFD62C811F97E53B000C8ED4 /* ZoopAPI.swift in Sources */,
+				C5C7BDA9200626A7000A8005 /* ZoopMethod.swift in Sources */,
+				CFCA83DB1F96353000D21B71 /* ExtraCardInformationProtocol.swift in Sources */,
+				A68B9A34202E2C2E00F717B8 /* ZoopSDKErrorHandler.swift in Sources */,
+				F5833F351FE9783300A1A5CB /* SQLiteStatement.swift in Sources */,
+				CEFCEB392049A03800AF1BFC /* BtLeDeviceFinderProtocol.swift in Sources */,
+				848DEAE71FBA058200CD39AF /* WebsocketTimeoutProtocol.swift in Sources */,
+				CF5BDA561F978D2C00C660F7 /* String+Substring.swift in Sources */,
+				CFC187A71F8F929200E2AB65 /* TerminalListManagerProtocol.swift in Sources */,
+				CF3B75361F902F6F0060CB14 /* WebsocketObserverProtocol.swift in Sources */,
+				CFCA83DF1F965B4E00D21B71 /* VoidTransactionProtocol.swift in Sources */,
+				CF5A8E851F9D4608002D4025 /* BluetoothConnectionProtocol.swift in Sources */,
+				CFCA83DD1F9635E400D21B71 /* TerminalPaymentProtocol.swift in Sources */,
+				A6436C8420347A960091379C /* Data+AppendingToFile.swift in Sources */,
+				CFCA83E11F965C7600D21B71 /* ApplicationDisplayProtocol.swift in Sources */,
+				CF50B3FA1FA8AD4F0043595A /* CRC16.swift in Sources */,
+				CEFCEB3E2049DD7800AF1BFC /* BtAcessoryDeviceFinderProtocol.swift in Sources */,
+				CF3B752F1F9022540060CB14 /* WebSocket.swift in Sources */,
+				F5833F341FE9783300A1A5CB /* SQLiteStatusCode.swift in Sources */,
+				C51CCA002003EAC800F058B9 /* TransactionStatus.swift in Sources */,
+				CEFCEB44204DE9D300AF1BFC /* BtleDevicesUUID.swift in Sources */,
+				CEFCEB302045BA7A00AF1BFC /* DevicesManager.swift in Sources */,
+				CFCA83E31F965D4600D21B71 /* TerminalMessageType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFF2CB21F8D5986005064BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFFF2CBC1F8D5986005064BF /* EMVConnectiOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CFFF2CB91F8D5986005064BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFFF2CAC1F8D5986005064BF /* EMVConnectiOS */;
+			targetProxy = CFFF2CB81F8D5986005064BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A64E084B215022DC009A7921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_HEADERS_RUN_UNIFDEF = NO;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KJ67298GT8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"STAGING=1",
+					"DEBUG=1",
+				);
+				INFOPLIST_FILE = "EMVConnectiOS copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				"OTHER_LDFLAGS[arch=*]" = "-lz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoop.EMVConnectiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A64E084C215022DC009A7921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_HEADERS_RUN_UNIFDEF = NO;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KJ67298GT8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = "STAGING=1";
+				INFOPLIST_FILE = "EMVConnectiOS copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/**";
+				"OTHER_LDFLAGS[arch=*]" = "-lz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoop.EMVConnectiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A64E088F21502396009A7921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_HEADERS_RUN_UNIFDEF = NO;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KJ67298GT8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"PROD=1",
+					"DEBUG=1",
+				);
+				INFOPLIST_FILE = "EMVConnectiOS copy2-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				"OTHER_LDFLAGS[arch=*]" = "-lz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoop.EMVConnectiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A64E089021502396009A7921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_HEADERS_RUN_UNIFDEF = NO;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KJ67298GT8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = "PROD=1";
+				INFOPLIST_FILE = "EMVConnectiOS copy2-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/**";
+				"OTHER_LDFLAGS[arch=*]" = "-lz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoop.EMVConnectiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CFB777651FAA223C007DD0AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 27M9QMZ93J;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CFB777661FAA223C007DD0AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 27M9QMZ93J;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CFFF2CBF1F8D5986005064BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CFFF2CC01F8D5986005064BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CFFF2CC21F8D5986005064BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_HEADERS_RUN_UNIFDEF = NO;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KJ67298GT8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"DEVELOP=1",
+				);
+				INFOPLIST_FILE = EMVConnectiOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				MARKETING_VERSION = 1.3.2;
+				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-lz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoop.EMVConnectiOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64e armv7 armv7s arm64 x86_64";
+			};
+			name = Debug;
+		};
+		CFFF2CC31F8D5986005064BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_HEADERS_RUN_UNIFDEF = NO;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KJ67298GT8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = "DEVELOP=1";
+				INFOPLIST_FILE = EMVConnectiOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/**";
+				MARKETING_VERSION = 1.3.2;
+				ONLY_ACTIVE_ARCH = NO;
+				"OTHER_LDFLAGS[arch=*]" = "-lz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoop.EMVConnectiOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64e armv7 armv7s arm64 x86_64";
+			};
+			name = Release;
+		};
+		CFFF2CC51F8D5986005064BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KJ67298GT8;
+				INFOPLIST_FILE = EMVConnectiOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = carlag.EMVConnectiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CFFF2CC61F8D5986005064BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KJ67298GT8;
+				INFOPLIST_FILE = EMVConnectiOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = carlag.EMVConnectiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A64E084A215022DC009A7921 /* Build configuration list for PBXNativeTarget "EMVConnectiOS-STAGING" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A64E084B215022DC009A7921 /* Debug */,
+				A64E084C215022DC009A7921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A64E088E21502396009A7921 /* Build configuration list for PBXNativeTarget "EMVConnectiOS-PROD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A64E088F21502396009A7921 /* Debug */,
+				A64E089021502396009A7921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFB777671FAA223C007DD0AD /* Build configuration list for PBXAggregateTarget "EMVConnectiOS-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFB777651FAA223C007DD0AD /* Debug */,
+				CFB777661FAA223C007DD0AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFFF2CA71F8D5986005064BF /* Build configuration list for PBXProject "EMVConnectiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFFF2CBF1F8D5986005064BF /* Debug */,
+				CFFF2CC01F8D5986005064BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFFF2CC11F8D5986005064BF /* Build configuration list for PBXNativeTarget "EMVConnectiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFFF2CC21F8D5986005064BF /* Debug */,
+				CFFF2CC31F8D5986005064BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFFF2CC41F8D5986005064BF /* Build configuration list for PBXNativeTarget "EMVConnectiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFFF2CC51F8D5986005064BF /* Debug */,
+				CFFF2CC61F8D5986005064BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFFF2CA41F8D5986005064BF /* Project object */;
+}
