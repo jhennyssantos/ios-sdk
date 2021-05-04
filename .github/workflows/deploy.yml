@@ -44,9 +44,15 @@ jobs:
         run: /usr/bin/xcodebuild -version
         
       # Device slice
-      - name: Build Archive
+      # - name: Build Archive
+      #   run: |
+      #     xcodebuild -sdk iphoneos -project CocoaHeadsNL/CocoaHeadsNL.xcodeproj \
+      #     -configuration Release -scheme CocoaHeadsNL \
+      #     -derivedDataPath DerivedData \
+      #     -archivePath DerivedData/Archive/CocoaHeadsNL archive
+      - name: Build Archive 2
         run: |
-          xcodebuild -sdk iphoneos -project CocoaHeadsNL/CocoaHeadsNL.xcodeproj \
-          -configuration Release -scheme CocoaHeadsNL \
-          -derivedDataPath DerivedData \
-          -archivePath DerivedData/Archive/CocoaHeadsNL archive
+          xcodebuild archive -project EMVConnectiOS.xcodeproj \
+          -scheme EMVConnectiOS -configuration Release \
+          -destination 'generic/platform=iOS' \
+          -archivePath build/EMVConnectiOS.framework-iphoneos.xcarchive SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES
