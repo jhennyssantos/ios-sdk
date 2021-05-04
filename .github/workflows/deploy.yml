@@ -85,7 +85,7 @@ jobs:
           -output "$(pwd)/EMVConnectiOS_${VERSION}.xcframework"
 
       - name: Final Version
-        run: |
-          tar -czv -f $(getFinalVersionName).tar.gz $(getFinalVersionName)
+        run: build/test.sh
+        shell: bash
           
 
