@@ -70,3 +70,8 @@ jobs:
           -scheme EMVConnectiOS -configuration Release \
           -destination 'platform=macOS,arch=x86_64,variant=Mac Catalyst' \
           -archivePath build/EMVConnectiOS.framework-catalyst.xcarchive SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES
+
+      - name: Iphone Simulator
+        run: |
+          xcodebuild build -project EMVConnectiOS.xcodeproj \
+          -target EMVConnectiOS -sdk iphonesimulator SYMROOT=build
