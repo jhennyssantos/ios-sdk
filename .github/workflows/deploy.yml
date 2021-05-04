@@ -45,4 +45,8 @@ jobs:
         
       # Device slice
       - name: Build Archive
-        run: xcode-build -sdk iphoneos -project CocoaHeadsNL/CocoaHeadsNL.xcodeproj
+        run: |
+          xcode-build -sdk iphoneos -project CocoaHeadsNL/CocoaHeadsNL.xcodeproj \
+          -configuration Release -scheme CocoaHeadsNL \
+          -derivedDataPath DerivedData \
+          -archivePath DerivedData/Archive/CocoaHeadsNL archive
