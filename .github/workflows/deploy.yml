@@ -85,7 +85,7 @@ jobs:
           -output "$(pwd)/EMVConnectiOS_${VERSION}.xcframework"
 
       - name: Final Version
-        run: ./ios-sdk/test.sh
+        run: ./test.sh
         shell: bash
           
 
