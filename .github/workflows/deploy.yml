@@ -88,6 +88,6 @@ jobs:
         run: ./test.sh
         shell: bash
         with:
-          password: ${{ secrets.ACCESS_TOKEN }}
+          # password: ${{ secrets.ACCESS_TOKEN }}
           
 
