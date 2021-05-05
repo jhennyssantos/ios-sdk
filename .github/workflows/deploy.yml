@@ -87,7 +87,7 @@ jobs:
       - name: Final Version
         run: sudo ./test.sh
         shell: bash
-        with:
+        #with:
           # password: ${{ secrets.ACCESS_TOKEN }}
           
 
