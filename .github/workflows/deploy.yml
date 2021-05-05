@@ -85,7 +85,7 @@ jobs:
           -output "$(pwd)/EMVConnectiOS_${VERSION}.xcframework"
 
       - name: Final Version
-        run: sudo ./test.sh
+        run: chmod +x ./test.sh
         shell: bash
         #with:
           # password: ${{ secrets.ACCESS_TOKEN }}
