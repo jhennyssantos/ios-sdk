@@ -12,14 +12,14 @@
       shell: "grep -m 1 'MARKETING_VERSION' {{ folder }}EMVConnectiOS.xcodeproj/project.pbxproj | cut -c 25- | sed 's/;$//'"
       register: sdk_version
     
-    # - name: Check File Exist
-    #   aws_s3:
-    #     src: "deploy.yml"
-    #     bucket: "zoop-release-demo-ios"
-    #     object: "/EMVConnect/iOS/{{ sdk_version.stdout }}/EMVConnectiOS.zip"
-    #     mode: put
-    #     overwrite: never
-    #   register: stat_result
+    - name: Check File Exist
+      aws_s3:
+        src: "deploy.yml"
+        bucket: "teste-release-demo-ios"
+        object: "/EMVConnect/iOS/{{ sdk_version.stdout }}/EMVConnectiOS.zip"
+        mode: put
+        overwrite: never
+      register: stat_result
 
     # - name: If File Exist Stop Playbook
     #   fail: msg="File exist on S3 Bucket"
