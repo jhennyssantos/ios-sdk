@@ -36,9 +36,12 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      # Get SDK version
-      - name: Get SDK Version
+      - name: Install Ansible
+        run: brew install ansible
       
+      # Get SDK version
+      #- name: Get SDK Version
+
           
       # # Xcode    
       # - name: Select Xcode
