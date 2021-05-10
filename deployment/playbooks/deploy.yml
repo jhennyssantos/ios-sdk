@@ -1,0 +1,67 @@
+---
+- name: "Build EMVConnect SDK for iOS"
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+    folder: "../../"
+  
+  tasks:
+
+    - name: Get SDK Version
+      shell: "grep -m 1 'MARKETING_VERSION' {{ folder }}EMVConnectiOS.xcodeproj/project.pbxproj | cut -c 25- | sed 's/;$//'"
+      register: sdk_version
+    
+    - name: Check File Exist
+      aws_s3:
+        src: "deploy.yml"
+        bucket: "zoop-release-demo-ios"
+        object: "/EMVConnect/iOS/{{ sdk_version.stdout }}/EMVConnectiOS.zip"
+        mode: put
+        overwrite: never
+      register: stat_result
+
+    - name: If File Exist Stop Playbook
+      fail: msg="File exist on S3 Bucket"
+      when: stat_result.changed == false
+
+    - name: Build SDK
+      shell: "sh create_fat_binaries_fw.sh"
+      args:
+        chdir: "{{ folder }}"
+    
+    - name: Copy License file
+      shell: "cp license build/Release-universal/license"
+      args:
+        chdir: "{{ folder }}"
+
+    - name: Create Zip file
+      shell: "zip -r EMVConnectiOS.zip license EMVConnectiOS.framework EMVConnectiOS.framework.dSYM"
+      args:
+        chdir: "{{ folder }}/build/Release-universal"
+
+    - name: Upload Zip to AWS S3
+      shell: "aws s3 cp EMVConnectiOS.zip s3://zoop-release-sdk-ios-prd/EMVConnect/iOS/{{ sdk_version.stdout }}/ --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers"
+      args:
+        chdir: "{{ folder }}/build/Release-universal"
+
+    - name: Upload Tar GZ to AWS S3
+      shell: "aws s3 cp EMVConnectiOS.tar.gz s3://zoop-release-sdk-ios-prd/EMVConnect/iOS/{{ sdk_version.stdout }}/ --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers"
+      args:
+        chdir: "{{ folder }}"
+
+    - name: Set PodSpec Version
+      shell: "sed -ie 's/VERSION/{{ sdk_version.stdout }}/g' EMVConnectiOS.podspec"
+      args:
+        chdir: "{{ folder }}"
+
+    - name: Pod Spec Lint
+      shell: "pod spec lint"
+      args:
+        chdir: "{{ folder }}"
+
+    - name: Publish Pod on CocoaPods
+      shell: "pod trunk push EMVConnectiOS.podspec"
+      args:
+        chdir: "{{ folder }}"
+

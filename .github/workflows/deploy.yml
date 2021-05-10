@@ -35,59 +35,63 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      # Get SDK version
+      - name: Get SDK Version
+      
           
-      # Xcode    
-      - name: Select Xcode
-        run: sudo xcode-select -switch /Applications/Xcode_11.3.app
+      # # Xcode    
+      # - name: Select Xcode
+      #   run: sudo xcode-select -switch /Applications/Xcode_11.3.app
         
-      - name: Xcode version
-        run: /usr/bin/xcodebuild -version
+      # - name: Xcode version
+      #   run: /usr/bin/xcodebuild -version
         
-      # Device slice
-      # - name: Build Archive
+      # # Device slice
+      # # - name: Build Archive
+      # #   run: |
+      # #     xcodebuild -sdk iphoneos -project CocoaHeadsNL/CocoaHeadsNL.xcodeproj \
+      # #     -configuration Release -scheme CocoaHeadsNL \
+      # #     -derivedDataPath DerivedData \
+      # #     -archivePath DerivedData/Archive/CocoaHeadsNL archive
+      # - name: Build Archive 2
       #   run: |
-      #     xcodebuild -sdk iphoneos -project CocoaHeadsNL/CocoaHeadsNL.xcodeproj \
-      #     -configuration Release -scheme CocoaHeadsNL \
-      #     -derivedDataPath DerivedData \
-      #     -archivePath DerivedData/Archive/CocoaHeadsNL archive
-      - name: Build Archive 2
-        run: |
-          xcodebuild archive -project EMVConnectiOS.xcodeproj \
-          -scheme EMVConnectiOS -configuration Release \
-          -destination 'generic/platform=iOS' \
-          -archivePath build/EMVConnectiOS.framework-iphoneos.xcarchive SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES
+      #     xcodebuild archive -project EMVConnectiOS.xcodeproj \
+      #     -scheme EMVConnectiOS -configuration Release \
+      #     -destination 'generic/platform=iOS' \
+      #     -archivePath build/EMVConnectiOS.framework-iphoneos.xcarchive SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES
 
-      - name: Simulator slice
-        run: |
-          xcodebuild archive -project EMVConnectiOS.xcodeproj \
-          -scheme EMVConnectiOS -configuration Release \
-          -destination 'generic/platform=iOS Simulator' \
-          -archivePath build/EMVConnectiOS.framework-iphonesimulator.xcarchive SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES
+      # - name: Simulator slice
+      #   run: |
+      #     xcodebuild archive -project EMVConnectiOS.xcodeproj \
+      #     -scheme EMVConnectiOS -configuration Release \
+      #     -destination 'generic/platform=iOS Simulator' \
+      #     -archivePath build/EMVConnectiOS.framework-iphonesimulator.xcarchive SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES
 
-      - name: Mac Catalyst slice
-        run: |
-          xcodebuild archive -project EMVConnectiOS.xcodeproj \
-          -scheme EMVConnectiOS -configuration Release \
-          -destination 'platform=macOS,arch=x86_64,variant=Mac Catalyst' \
-          -archivePath build/EMVConnectiOS.framework-catalyst.xcarchive SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES
+      # - name: Mac Catalyst slice
+      #   run: |
+      #     xcodebuild archive -project EMVConnectiOS.xcodeproj \
+      #     -scheme EMVConnectiOS -configuration Release \
+      #     -destination 'platform=macOS,arch=x86_64,variant=Mac Catalyst' \
+      #     -archivePath build/EMVConnectiOS.framework-catalyst.xcarchive SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES
 
-      - name: Iphone Simulator
-        run: |
-          xcodebuild build -project EMVConnectiOS.xcodeproj \
-          -target EMVConnectiOS -sdk iphonesimulator SYMROOT=build
+      # - name: Iphone Simulator
+      #   run: |
+      #     xcodebuild build -project EMVConnectiOS.xcodeproj \
+      #     -target EMVConnectiOS -sdk iphonesimulator SYMROOT=build
 
-      - name: Create xcframework
-        run: |
-          xcodebuild -create-xcframework \
-          -framework "build/EMVConnectiOS.framework-iphoneos.xcarchive/Products/Library/Frameworks/EMVConnectiOS.framework" \
-          -framework "build/EMVConnectiOS.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/EMVConnectiOS.framework" \
-          -framework "build/EMVConnectiOS.framework-catalyst.xcarchive/Products/Library/Frameworks/EMVConnectiOS.framework" \
-          -output "$(pwd)/EMVConnectiOS_${VERSION}.xcframework"
+      # - name: Create xcframework
+      #   run: |
+      #     xcodebuild -create-xcframework \
+      #     -framework "build/EMVConnectiOS.framework-iphoneos.xcarchive/Products/Library/Frameworks/EMVConnectiOS.framework" \
+      #     -framework "build/EMVConnectiOS.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/EMVConnectiOS.framework" \
+      #     -framework "build/EMVConnectiOS.framework-catalyst.xcarchive/Products/Library/Frameworks/EMVConnectiOS.framework" \
+      #     -output "$(pwd)/EMVConnectiOS_${VERSION}.xcframework"
 
-      - name: Final Version
-        run: chmod +x ./test.sh
-        shell: bash
-        #with:
-          # password: ${{ secrets.ACCESS_TOKEN }}
+      # - name: Final Version
+      #   run: chmod +x ./test.sh
+      #   shell: bash
+      #   #with:
+      #     # password: ${{ secrets.ACCESS_TOKEN }}
           
 
