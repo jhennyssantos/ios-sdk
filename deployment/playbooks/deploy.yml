@@ -17,7 +17,7 @@
         src: "deploy.yml"
         bucket: "teste-release-demo-ios"
         object: "/EMVConnect/iOS/{{ sdk_version.stdout }}/EMVConnectiOS.zip"
-        mode: put
+        #mode: put
         overwrite: never
       register: stat_result
 
