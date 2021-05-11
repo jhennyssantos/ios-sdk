@@ -21,14 +21,23 @@ jobs:
     # runs-on: ubuntu-latest
     runs-on: MacOS-latest
     env:
-       ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
-       SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
+      BUCKET_NAME: teste-release-demo-ios
+      #  ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
+      #  SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      #
+      - name: AWS Access
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
+          #aws-region: ${{ env.AWS_REGION }}
+      
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
