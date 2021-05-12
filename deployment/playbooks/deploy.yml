@@ -39,7 +39,7 @@
 
     - name: Create Zip file
       # shell: "zip -r EMVConnectiOS.zip license EMVConnectiOS.framework EMVConnectiOS.framework.dSYM"
-      shell: "zip -r EMVConnectiOS.zip license EMVConnectiOS.xcframework"
+      shell: "zip -r EMVConnectiOS.zip EMVConnectiOS.xcframework"
       args:
         # chdir: "{{ folder }}/build/Release-universal"
         chdir: "{{ folder }}"
