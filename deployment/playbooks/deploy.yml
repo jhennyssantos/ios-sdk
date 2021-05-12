@@ -46,8 +46,8 @@
 
     - name: Create Zip file
       archive:
-        path: "{{ folder }}/EMVConnectiOS.xcframework"
-        dest: "{{ folder }}/release/"
+        path: /EMVConnectiOS.xcframework
+        dest: /release
         format: zip
 
     # - name: Upload Zip to AWS S3
