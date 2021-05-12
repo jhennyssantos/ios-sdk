@@ -24,7 +24,8 @@
 
     - name: If File Exist Stop Playbook
       fail: msg="File exist on S3 Bucket"
-      when: stat_result.changed == false
+      #when: stat_result.changed == false
+      when: stat_result.changed == true
 
     - name: Build SDK
       shell: "sh create_fat_binaries_fw.sh"
