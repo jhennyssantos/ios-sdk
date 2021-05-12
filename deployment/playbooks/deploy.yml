@@ -22,16 +22,14 @@
         overwrite: never
       register: stat_result
 
+    - name: If File Exist Stop Playbook
+      fail: msg="File exist on S3 Bucket"
+      when: stat_result.changed == false
 
-
-    # - name: If File Exist Stop Playbook
-    #   fail: msg="File exist on S3 Bucket"
-    #   when: stat_result.changed == false
-
-    # - name: Build SDK
-    #   shell: "sh create_fat_binaries_fw.sh"
-    #   args:
-    #     chdir: "{{ folder }}"
+    - name: Build SDK
+      shell: "sh create_fat_binaries_fw.sh"
+      args:
+        chdir: "{{ folder }}"
     
     # - name: Copy License file
     #   shell: "cp license build/Release-universal/license"
