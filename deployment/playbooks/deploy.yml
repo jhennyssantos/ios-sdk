@@ -45,11 +45,10 @@
     #     chdir: "{{ folder }}"
 
     - name: Create Zip file
-      community.general.archive:
+      archive:
         path: /EMVConnectiOS.xcframework
+        dest: "{{ folder }}"
         format: zip
-        args:
-          chdir: "{{ folder }}"
 
     # - name: Upload Zip to AWS S3
     #   shell: "aws s3 cp EMVConnectiOS.zip s3://zoop-release-sdk-ios-prd/EMVConnect/iOS/{{ sdk_version.stdout }}/ --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers"
