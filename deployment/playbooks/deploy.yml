@@ -41,7 +41,8 @@
       # shell: "zip -r EMVConnectiOS.zip license EMVConnectiOS.framework EMVConnectiOS.framework.dSYM"
       shell: "zip -r EMVConnectiOS.zip license EMVConnectiOS.xcframework"
       args:
-        chdir: "{{ folder }}/build/Release-universal"
+        # chdir: "{{ folder }}/build/Release-universal"
+        chdir: "{{ folder }}"
 
     # - name: Upload Zip to AWS S3
     #   shell: "aws s3 cp EMVConnectiOS.zip s3://zoop-release-sdk-ios-prd/EMVConnect/iOS/{{ sdk_version.stdout }}/ --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers"
