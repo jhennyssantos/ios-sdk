@@ -32,10 +32,10 @@
       args:
         chdir: "{{ folder }}"
     
-    # - name: Copy License file
-    #   shell: "cp license build/Release-universal/license"
-    #   args:
-    #     chdir: "{{ folder }}"
+    - name: Copy License file
+      shell: "cp license build/Release-universal/license"
+      args:
+        chdir: "{{ folder }}"
 
     # - name: Create Zip file
     #   shell: "zip -r EMVConnectiOS.zip license EMVConnectiOS.framework EMVConnectiOS.framework.dSYM"
