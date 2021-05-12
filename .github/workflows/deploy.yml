@@ -52,6 +52,13 @@ jobs:
       - name: Install Ansible
         run: brew install ansible
 
+    # teste de checkfile
+      - name: Get SDK Version
+        run: |
+          grep -m 1 'MARKETING_VERSION' {{ folder }}EMVConnectiOS.xcodeproj/project.pbxproj | cut -c 25- | sed 's/;$//
+        shell: bash
+        register: sdk_version
+
       - name: Run Ansible
         run: ansible-playbook ./deployment/playbooks/deploy.yml
       
