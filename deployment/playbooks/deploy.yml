@@ -50,10 +50,10 @@
         dest: /release
         format: zip
 
-    # - name: Upload Zip to AWS S3
-    #   shell: "aws s3 cp EMVConnectiOS.zip s3://zoop-release-sdk-ios-prd/EMVConnect/iOS/{{ sdk_version.stdout }}/ --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers"
-    #   args:
-    #     chdir: "{{ folder }}/build/Release-universal"
+    - name: Upload Zip to AWS S3
+      shell: "aws s3 cp EMVConnectiOS.xcframework.zip s3://teste-release-demo-ios/EMVConnect/iOS/{{ sdk_version.stdout }}/ --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers"
+      args:
+        chdir: "{{ folder }}/release"
 
     # - name: Upload Tar GZ to AWS S3
     #   shell: "aws s3 cp EMVConnectiOS.tar.gz s3://zoop-release-sdk-ios-prd/EMVConnect/iOS/{{ sdk_version.stdout }}/ --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers"
