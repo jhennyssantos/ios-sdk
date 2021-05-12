@@ -9,5 +9,5 @@ Pod::Spec.new do |s|
 
     s.platform          = :ios
     s.source            = { :http => 'https://zoop-release-sdk-ios-prd.s3.sa-east-1.amazonaws.com/EMVConnect/iOS/VERSION/EMVConnectiOS.zip' }
-    s.source_files      = "EMVConnectiOS.framework/**/*.{h,m}"
+    s.source_files      = "EMVConnectiOS.xcframework/**/*.{h,m}"
 end
