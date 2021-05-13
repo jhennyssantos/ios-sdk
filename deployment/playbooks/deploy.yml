@@ -37,18 +37,18 @@
     #   args:
     #     chdir: "{{ folder }}"
 
-    - name: Create Zip file
-      # shell: "zip -r EMVConnectiOS.zip license EMVConnectiOS.framework EMVConnectiOS.framework.dSYM"
-      shell: "zip -r EMVConnectiOS.zip /EMVConnectiOS.xcframework"
-      args:
-        # chdir: "{{ folder }}/build/Release-universal"
-        chdir: "{{ folder }}"
-
     # - name: Create Zip file
-    #   archive:
-    #     path: /EMVConnectiOS.xcframework
-    #     dest: /release
-    #     format: zip
+    #   # shell: "zip -r EMVConnectiOS.zip license EMVConnectiOS.framework EMVConnectiOS.framework.dSYM"
+    #   shell: "zip -r EMVConnectiOS.zip /EMVConnectiOS.xcframework"
+    #   args:
+    #     # chdir: "{{ folder }}/build/Release-universal"
+    #     chdir: "{{ folder }}"
+
+    - name: Create Zip file
+      archive:
+        path: /EMVConnectiOS.xcframework
+        dest: /release/EMVConnectiOS.zip
+        format: zip
 
     # - name: Upload Zip to AWS S3
     #   shell: "aws s3 cp EMVConnectiOS.xcframework.zip s3://teste-release-demo-ios/EMVConnect/iOS/{{ sdk_version.stdout }}/ --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers"
