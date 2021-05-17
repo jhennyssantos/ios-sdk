@@ -59,7 +59,7 @@ jobs:
 
       - name: Run Ansible
         # run: ansible-playbook ./deployment/playbooks/deploy.yml
-        run: ansible-playbook ./deployment/playbooks/deploy.yml --extra-vars variable_host=${{ env.GITHUB_ENV }}
+        run: ansible-playbook ./deployment/playbooks/deploy.yml --extra-vars variable_host=${{ step.step_oneoutputs.GITHUB_ENV }}
 
       #
       # Get SDK version
