@@ -72,7 +72,7 @@ jobs:
           inventory: |
             [all]
             localhost
-          # vault_password: ${{secrets.VAULT_PASSWORD}}
+        # vault_password: ${{secrets.VAULT_PASSWORD}}
           options: |
           --extra-vars hello=there
           --verbose
