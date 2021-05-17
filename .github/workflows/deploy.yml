@@ -23,6 +23,7 @@ jobs:
     env:
       BUCKET_NAME: teste-release-demo-ios
       AWS_REGION: us-east-1
+      HOSTNAME: ${{ secrets.HOSTNAME }}
       #  ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
       #  SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
 
@@ -40,15 +41,15 @@ jobs:
       - name: Install Ansible
         run: brew install ansible
 
-      - name: Set variable hostname
-        id: step_one
-        run: |
-          echo 'JSON_RESPONSE<<EOF' >> $GITHUB_ENV
-          hostname -f >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
+      # - name: Set variable hostname
+      #   id: step_one
+      #   run: |
+      #     echo 'JSON_RESPONSE<<EOF' >> $GITHUB_ENV
+      #     hostname -f >> $GITHUB_ENV
+      #     echo 'EOF' >> $GITHUB_ENV
 
-      - name: echo GITHUB_ENV
-        run: echo ${{ env.GITHUB_ENV }}
+      - name: echo HOSTNAME
+        run: echo ${{ secrets.HOSTNAME }}
 
       # - name: Set selected color
       #   run: echo '::set-output name=SELECTED_COLOR::green'
@@ -65,11 +66,11 @@ jobs:
       # Get SDK version
       #- name: Get SDK Version
 #
-      - name: define Hostname
-        # run: scutil --set LocalHostName "zoopbuild"
-        run: hostname zoopbuild
-      - name: mostra Hostname
-        run: hostname
+      # - name: define Hostname
+      #   # run: scutil --set LocalHostName "zoopbuild"
+      #   run: hostname zoopbuild
+      # - name: mostra Hostname
+      #   run: hostname
 
 
 #
