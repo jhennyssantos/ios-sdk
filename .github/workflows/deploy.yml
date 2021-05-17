@@ -40,48 +40,48 @@ jobs:
       - name: Install Ansible
         run: brew install ansible
 
-      - name: Set the value
+      - name: Set variable hostname
         id: step_one
         run: |
           echo 'JSON_RESPONSE<<EOF' >> $GITHUB_ENV
           hostname -f >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
 
-      - name: echo GITHUB_ENV
-        run: echo ${{ env.GITHUB_ENV }}
+      # - name: echo GITHUB_ENV
+        # run: echo ${{ env.GITHUB_ENV }}
 
-      - name: Set selected color
-        run: echo '::set-output name=SELECTED_COLOR::green'
-        id: random-color-generator
+      # - name: Set selected color
+      #   run: echo '::set-output name=SELECTED_COLOR::green'
+      #   id: random-color-generator
+      #
+      # - name: Get color
+      #   run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
 
-      - name: Get color
-        run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
-
-
-      # - name: Run Ansible
-      #   run: ansible-playbook ./deployment/playbooks/deploy.yml
+      - name: Run Ansible
+        # run: ansible-playbook ./deployment/playbooks/deploy.yml
+        run: ansible-playbook ./deployment/playbooks/deploy.yml --extra-vars "variable_host=${{ env.GITHUB_ENV }}"
 
       #
       # Get SDK version
       #- name: Get SDK Version
-
-      - name: Hostname
-        run: hostname -f
-
-
-      - name: Run playbook
-        uses: dawidd6/action-ansible-playbook@v2
-        with:
-          playbook: ./deployment/playbooks/deploy.yml
-          directory: ./
-          # key: ${{secrets.SSH_PRIVATE_KEY}}
-          inventory: |
-            [all]
-            localhost
-        # vault_password: ${{secrets.VAULT_PASSWORD}}
-#           options: |
-#           #--extra-vars hello=there
-#           --verbose
+#
+#       - name: Hostname
+#         run: hostname -f
+#
+#
+#       - name: Run playbook
+#         uses: dawidd6/action-ansible-playbook@v2
+#         with:
+#           playbook: ./deployment/playbooks/deploy.yml
+#           directory: ./
+#           # key: ${{secrets.SSH_PRIVATE_KEY}}
+#           inventory: |
+#             [all]
+#             localhost
+#         # vault_password: ${{secrets.VAULT_PASSWORD}}
+# #           options: |
+# #           #--extra-vars hello=there
+# #           --verbose
 
       # # Xcode
       # - name: Select Xcode
