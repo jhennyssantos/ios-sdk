@@ -3,10 +3,10 @@
   #hosts: localhost
   hosts: all
   #connection: local
-  gather_facts: no
+  # gather_facts: no
   vars:
     folder: "../../"
-  
+
   tasks:
     - debug: var=ansible_all_ipv4_addresses
     - debug: var=ansible_default_ipv4.address
@@ -16,10 +16,12 @@
     #   delegate_to: localhost
 
     - name: Get SDK Version
+      hosts: *
       shell: "grep -m 1 'MARKETING_VERSION' {{ folder }}EMVConnectiOS.xcodeproj/project.pbxproj | cut -c 25- | sed 's/;$//'"
       register: sdk_version
-    
+
     - name: Check File Exist
+      hosts: *
       aws_s3:
         src: "deploy.yml"
         bucket: "teste-release-demo-ios"
@@ -30,15 +32,17 @@
       register: stat_result
 
     - name: If File Exist Stop Playbook
+      hosts: *
       fail: msg="File exist on S3 Bucket"
       #when: stat_result.changed == false
       when: stat_result.changed == true
 
     - name: Build SDK
+      hosts: *
       shell: "sh create_fat_binaries_fw.sh"
       args:
         chdir: "{{ folder }}"
-    
+
     # - name: Copy License file
     #   shell: "cp license build/Release-universal/license"
     #   args:
@@ -81,4 +85,3 @@
     #   shell: "pod trunk push EMVConnectiOS.podspec"
     #   args:
     #     chdir: "{{ folder }}"
-
