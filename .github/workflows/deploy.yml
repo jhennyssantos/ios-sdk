@@ -30,8 +30,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      #
       - name: AWS Access
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -39,22 +37,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      # # Runs a single command using the runners shell
-      # - name: Run a one-line script
-      #   run: echo Hello, world!
+      # - name: Install Ansible
+      #   run: brew install ansible
 
-      # # Runs a set of commands using the runners shell
-      # - name: Run a multi-line script
-      #   run: |
-      #     echo Add other actions to build,
-      #     echo test, and deploy your project.
-
-      - name: Install Ansible
-        run: brew install ansible
-
-      # - name: cat /etc/ansible/hosts
-      #   run: cat /etc/ansible/hosts
-      #   shell: bash
 
       # - name: Run Ansible
       #   run: ansible-playbook ./deployment/playbooks/deploy.yml
@@ -63,31 +48,22 @@ jobs:
       # Get SDK version
       #- name: Get SDK Version
 
-      - name: Install SSH key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_KEY }}
-          name: id_rsa # optional
-          known_hosts: ${{ secrets.KNOWN_HOSTS }}
-          config: ${{ secrets.CONFIG }} # ssh_config; optional
-          if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
-          
-      - name: rsync over ssh
-        run: rsync ./foo/ user@remote:bar/
+      - name: Hostname
+        run: hostname -f
 
-      - name: Run playbook
-        uses: dawidd6/action-ansible-playbook@v2
-        with:
-          playbook: ./deployment/playbooks/deploy.yml
-          directory: ./
-          # key: ${{secrets.SSH_PRIVATE_KEY}}
-          inventory: |
-            [all]
-            localhost
-        # vault_password: ${{secrets.VAULT_PASSWORD}}
-#           options: |
-#           #--extra-vars hello=there
-#           --verbose
+#       - name: Run playbook
+#         uses: dawidd6/action-ansible-playbook@v2
+#         with:
+#           playbook: ./deployment/playbooks/deploy.yml
+#           directory: ./
+#           # key: ${{secrets.SSH_PRIVATE_KEY}}
+#           inventory: |
+#             [all]
+#             localhost
+#         # vault_password: ${{secrets.VAULT_PASSWORD}}
+# #           options: |
+# #           #--extra-vars hello=there
+# #           --verbose
 
       # # Xcode
       # - name: Select Xcode
