@@ -48,7 +48,7 @@ jobs:
           echo 'EOF' >> $GITHUB_ENV
 
       - name: echo GITHUB_ENV
-        run:  echo "hostname do capeta eh: ${{GITHUB_ENV}}"
+        run: echo ${{GITHUB_ENV}}
 
       - name: Set selected color
         run: echo '::set-output name=SELECTED_COLOR::green'
