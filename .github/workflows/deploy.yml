@@ -37,14 +37,14 @@ jobs:
           aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-     - name: Install Ansible
+      - name: Install Ansible
         run: brew install ansible
 
 
-     - name: Set selected color
+      - name: Set selected color
         run: echo '::set-output name=SELECTED_COLOR::green'
         id: random-color-generator
-     - name: Get color
+      - name: Get color
         run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
 
 
