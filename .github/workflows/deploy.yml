@@ -52,12 +52,14 @@ jobs:
       - name: Install Ansible
         run: brew install ansible
 
-      - name: Run Ansible
-        run: ansible-playbook ./deployment/playbooks/deploy.yml -l localhost
-
       - name: cat /etc/ansible/hosts
         run: cat /etc/ansible/hosts
         shell: bash
+
+      - name: Run Ansible
+        run: ansible-playbook ./deployment/playbooks/deploy.yml -l localhost
+
+
         
       
       # Get SDK version
