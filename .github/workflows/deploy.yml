@@ -63,6 +63,18 @@ jobs:
       # Get SDK version
       #- name: Get SDK Version
 
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          name: id_rsa # optional
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          config: ${{ secrets.CONFIG }} # ssh_config; optional
+          if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
+          
+      - name: rsync over ssh
+        run: rsync ./foo/ user@remote:bar/
+
       - name: Run playbook
         uses: dawidd6/action-ansible-playbook@v2
         with:
