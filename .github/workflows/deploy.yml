@@ -49,7 +49,9 @@ jobs:
       #     echo 'EOF' >> $GITHUB_ENV
 
       - name: echo HOSTNAME
-        run: echo ${{ env.HOSTNAME }}
+        env:
+          HOSTNAME: ${{ secrets.HOSTNAME }}
+        run: echo ${{ secrets.HOSTNAME }}
 
       # - name: Set selected color
       #   run: echo '::set-output name=SELECTED_COLOR::green'
