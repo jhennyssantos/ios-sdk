@@ -37,8 +37,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      # - name: Install Ansible
-      #   run: brew install ansible
+      - name: Install Ansible
+        run: brew install ansible
 
 
       # - name: Run Ansible
@@ -50,6 +50,12 @@ jobs:
 
       - name: Hostname
         run: hostname -f
+
+      - name: SSH ID
+        run: ssh-copy-id localhost
+
+      - name: Run Playbook
+        run: ansible-playbook -i hosts inventory.yml --check
 
 #       - name: Run playbook
 #         uses: dawidd6/action-ansible-playbook@v2

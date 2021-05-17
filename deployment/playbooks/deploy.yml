@@ -8,6 +8,8 @@
     folder: "../../"
   
   tasks:
+    - debug: var=ansible_all_ipv4_addresses
+    - debug: var=ansible_default_ipv4.address
 
     # - name: check that i have log file for all hosts on my local machine
     #   stat: path=/var/log/hosts/{{inventory_hostname}}.log
