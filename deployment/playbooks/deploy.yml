@@ -1,12 +1,17 @@
 ---
 - name: "Build EMVConnect SDK for iOS"
-  hosts: localhost
-  connection: local
+  # hosts: localhost
+  hosts: all
+  # connection: local
   gather_facts: no
   vars:
     folder: "../../"
   
   tasks:
+
+    - name: check that i have log file for all hosts on my local machine
+      stat: path=/var/log/hosts/{{inventory_hostname}}.log
+      delegate_to: localhost
 
     - name: Get SDK Version
       shell: "grep -m 1 'MARKETING_VERSION' {{ folder }}EMVConnectiOS.xcodeproj/project.pbxproj | cut -c 25- | sed 's/;$//'"
