@@ -50,8 +50,6 @@ jobs:
 
       - name: echo HOSTNAME
         run: echo ${{ env.HOSTNAME }}
-        with:
-          hostname: ${{ env.HOSTNAME }}
 
       # - name: Set selected color
       #   run: echo '::set-output name=SELECTED_COLOR::green'
