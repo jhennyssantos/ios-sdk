@@ -2,7 +2,7 @@
 
 name: CI
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
@@ -38,41 +38,54 @@ jobs:
           aws-access-key-id: ${{ secrets.ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
-      
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      # # Runs a single command using the runners shell
+      # - name: Run a one-line script
+      #   run: echo Hello, world!
 
-      - name: Install Ansible
-        run: brew install ansible
+      # # Runs a set of commands using the runners shell
+      # - name: Run a multi-line script
+      #   run: |
+      #     echo Add other actions to build,
+      #     echo test, and deploy your project.
+
+      # - name: Install Ansible
+      #   run: brew install ansible
 
       # - name: cat /etc/ansible/hosts
       #   run: cat /etc/ansible/hosts
       #   shell: bash
 
-      - name: Run Ansible
-        run: ansible-playbook ./deployment/playbooks/deploy.yml -l localhost
+      # - name: Run Ansible
+      #   run: ansible-playbook ./deployment/playbooks/deploy.yml
+
+      - uses: saubermacherag/ansible-playbook-docker-action@v1.3
+        with:
+          playbookName: './deployment/playbooks/deploy.yml'
+          inventoryFile: './deployment/deploy/inventory.yml'
+          requirementsFile: "./deployment/playbooks/requirements.yml"
+          # galaxyGithubUser: ${{ secrets.GITHUB_USER }}
+          # galaxyGithubToken: ${{ secrets.Github_PAT }}
+          # rolesPath: ".ansible/playbooks/roles"
+          # keyFile: ".ansible/random-ssh-key.pem"
+          # keyFileVaultPass: ${{ secrets.KEYFILE_VAULT_PASS }}
+          # extraFile: ".ansible/extra.yml"
+          # extraVars: "-e my_first_extra=${{ github.actor }} -e my_second_one=${{ github.sha }}"
+          verbosity: "vv"
 
 
-        
-      
+
       # Get SDK version
       #- name: Get SDK Version
 
-          
-      # # Xcode    
+
+      # # Xcode
       # - name: Select Xcode
       #   run: sudo xcode-select -switch /Applications/Xcode_11.3.app
-        
+
       # - name: Xcode version
       #   run: /usr/bin/xcodebuild -version
-        
+
       # # Device slice
       # # - name: Build Archive
       # #   run: |
@@ -119,5 +132,3 @@ jobs:
       #   shell: bash
       #   #with:
       #     # password: ${{ secrets.ACCESS_TOKEN }}
-          
-
