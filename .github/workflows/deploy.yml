@@ -23,7 +23,7 @@ jobs:
     env:
       BUCKET_NAME: teste-release-demo-ios
       AWS_REGION: us-east-1
-      HOSTNAME: ${{ secrets.HOSTNAME }}
+      #HOSTNAME: ${{ secrets.HOSTNAME }}
       #  ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
       #  SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
 
@@ -49,7 +49,9 @@ jobs:
       #     echo 'EOF' >> $GITHUB_ENV
 
       - name: echo HOSTNAME
-        run: echo ${{ secrets.HOSTNAME }}
+        run: echo ${{ env.HOSTNAME }}
+        with:
+          hostname: ${{ env.HOSTNAME }}
 
       # - name: Set selected color
       #   run: echo '::set-output name=SELECTED_COLOR::green'
