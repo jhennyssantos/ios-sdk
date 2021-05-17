@@ -65,9 +65,9 @@ jobs:
       # Get SDK version
       #- name: Get SDK Version
 #
-      - name: set Hostname
-        run: scutil --set LocalHostName "zoopbuild"
-
+      - name: define Hostname
+        # run: scutil --set LocalHostName "zoopbuild"
+        run: hostname zoopbuild
       - name: mostra Hostname
         run: hostname
 
