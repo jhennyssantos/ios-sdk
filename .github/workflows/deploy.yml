@@ -55,6 +55,9 @@ jobs:
       - name: Run Ansible
         run: ansible-playbook ./deployment/playbooks/deploy.yml -l localhost
 
+      - name: Cat cat /etc/ansible/hosts
+        run: cat /etc/ansible/hosts
+        shell: bash
         
       
       # Get SDK version
