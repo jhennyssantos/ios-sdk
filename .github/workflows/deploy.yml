@@ -53,7 +53,9 @@ jobs:
         run: brew install ansible
 
       - name: Run Ansible
-        run: ansible-playbook ./deployment/playbooks/deploy.yml
+        run: ansible-playbook ./deployment/playbooks/deploy.yml -l localhost
+
+        
       
       # Get SDK version
       #- name: Get SDK Version
