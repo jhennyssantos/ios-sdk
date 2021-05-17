@@ -57,16 +57,21 @@ jobs:
       # - name: Get color
       #   run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
 
-      - name: Run Ansible
-        # run: ansible-playbook ./deployment/playbooks/deploy.yml
-        run: echo ansible-playbook ./deployment/playbooks/deploy.yml --extra-vars variable_host=${{ steps.step_one.outputs.GITHUB_ENV }}
+      # - name: Run Ansible
+      #   # run: ansible-playbook ./deployment/playbooks/deploy.yml
+      #   run: ansible-playbook ./deployment/playbooks/deploy.yml --extra-vars variable_host=${{ steps.step_one.outputs.GITHUB_ENV }}
 
       #
       # Get SDK version
       #- name: Get SDK Version
 #
-#       - name: Hostname
-#         run: hostname -f
+      - name: set Hostname
+        run: scutil --set LocalHostName "zoopbuild"
+
+      - name: mostra Hostname
+        run: hostname
+
+
 #
 #
 #       - name: Run playbook
