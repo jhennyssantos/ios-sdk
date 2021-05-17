@@ -49,8 +49,8 @@ jobs:
       #     echo Add other actions to build,
       #     echo test, and deploy your project.
 
-      # - name: Install Ansible
-      #   run: brew install ansible
+      - name: Install Ansible
+        run: brew install ansible
 
       # - name: cat /etc/ansible/hosts
       #   run: cat /etc/ansible/hosts
