@@ -51,25 +51,20 @@ jobs:
       - name: Hostname
         run: hostname -f
 
-      - name: SSH ID
-        run: ssh-copy-id localhost
 
-      - name: Run Playbook
-        run: ansible-playbook -i hosts inventory.yml --check
-
-#       - name: Run playbook
-#         uses: dawidd6/action-ansible-playbook@v2
-#         with:
-#           playbook: ./deployment/playbooks/deploy.yml
-#           directory: ./
-#           # key: ${{secrets.SSH_PRIVATE_KEY}}
-#           inventory: |
-#             [all]
-#             localhost
-#         # vault_password: ${{secrets.VAULT_PASSWORD}}
-# #           options: |
-# #           #--extra-vars hello=there
-# #           --verbose
+      - name: Run playbook
+        uses: dawidd6/action-ansible-playbook@v2
+        with:
+          playbook: ./deployment/playbooks/deploy.yml
+          directory: ./
+          # key: ${{secrets.SSH_PRIVATE_KEY}}
+          inventory: |
+            [all]
+            localhost
+        # vault_password: ${{secrets.VAULT_PASSWORD}}
+#           options: |
+#           #--extra-vars hello=there
+#           --verbose
 
       # # Xcode
       # - name: Select Xcode
