@@ -73,9 +73,9 @@ jobs:
             [all]
             localhost
         # vault_password: ${{secrets.VAULT_PASSWORD}}
-          options: |
-          --extra-vars hello=there
-          --verbose
+#           options: |
+#           #--extra-vars hello=there
+#           --verbose
 
       # # Xcode
       # - name: Select Xcode
