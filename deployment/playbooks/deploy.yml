@@ -1,8 +1,8 @@
 ---
 - name: "Build EMVConnect SDK for iOS"
-  #hosts: localhost
+  hosts: localhost
   # hosts:
-  #connection: local
+  connection: local
   gather_facts: no
   vars:
     folder: "../../"
