@@ -39,8 +39,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-          # - name: Install Ansible
-      #   run: brew install ansible
+      - name: Install Ansible
+        run: brew install ansible
 
       # - name: Set variable hostname
       #   id: step_one
@@ -59,10 +59,10 @@ jobs:
       # - name: Get color
       #   run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
 
-      # - name: Run Ansible
-      #   # run: ansible-playbook ./deployment/playbooks/deploy.yml
-      #   run: ansible-playbook ./deployment/playbooks/deploy.yml --extra-vars variable_host=${{ steps.step_one.outputs.GITHUB_ENV }}
-
+      - name: Run Ansible
+        # run: ansible-playbook ./deployment/playbooks/deploy.yml
+        # run: ansible-playbook ./deployment/playbooks/deploy.yml --extra-vars variable_host=${{ steps.step_one.outputs.GITHUB_ENV }}
+        run: ansible-playbook ./deployment/playbooks/deploy.yml --extra-vars variable_host=${{ env.HOSTNAME }}
       #
       # Get SDK version
       #- name: Get SDK Version
