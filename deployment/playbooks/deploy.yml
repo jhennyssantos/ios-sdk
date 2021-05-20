@@ -34,7 +34,7 @@
       when: stat_result.changed == true
 
     - name: Build SDK
-        - local_action: script create_fat_binaries_fw.sh
+      local_action: script create_fat_binaries_fw.sh
       # shell: |
       # sh create_fat_binaries_fw.sh
       
